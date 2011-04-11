@@ -188,3 +188,19 @@ a strong {
    background:transparent url("images/bannerNewAndNoteworthy08M4.png") no-repeat 0 0;
    margin-top: 10px;
 }
+
+#obeo a {
+	display: block;
+	padding: 0;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#obeo img {
+	display: block;
+	width: 117px;
+	height: 60px;
+	margin-left: auto;
+	margin-right: auto;
+}

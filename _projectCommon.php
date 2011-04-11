@@ -32,9 +32,9 @@
 	$Nav->addCustomNav("Getting Involved", "/project/developers", "_blank", 3);
 
 	# Define keywords, author and title here, or in each PHP page specifically
-	$pageKeywords	= "xtext, dsl, modeling, domain specific language, textual";
-	$pageAuthor		= "Your name";
-	# $pageTitle 		= "Xtext";
+	$pageKeywords	= "intent, mylyn, doc, documentation, literate, modeling";
+	$pageAuthor		= "Obeo";
+	$pageTitle 		= "Intent";
 
 
 	# top navigation bar
@@ -47,7 +47,7 @@
 	# $Menu->addMenuItem("Developers", "/project/developers", "_self");
 	
 	# To define additional CSS or other pre-body headers
-	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/default/style.css"/>');
+	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/intent/intent_style.css"/>');
 	
 	# To enable occasional Eclipse Foundation Promotion banners on your pages (EclipseCon, etc)
 	$App->Promotion = TRUE;

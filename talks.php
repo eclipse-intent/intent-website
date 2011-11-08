@@ -10,14 +10,15 @@
  *    
  *******************************************************************************/
 
-	$pageTitle 		= "Intent - Download";
+	$pageTitle 		= "Intent - Talks & Transcripts";
 
 	$html  = <<<EOHTML
 <div id="midcolumn">
 <h2>$pageTitle</h2>
-<p>All downloads are provided under the terms and conditions of the <a href="/legal/epl/notice.php">Eclipse Foundation Software User Agreement</a> unless otherwise specified.</p>
+<p> You will find here the transcripts of all Intent talks. </p>
 
-<p> A <a href="http://wiki.eclipse.org/Intent/Installation_Guide">first build of Intent 0.7</a> is available and waiting for feedback.
+<p>
+<a href="./pages/transcripts/2011_EclipseConEurope/Intent_ece2011.htm">EclipseCon Europe 2011 : Create useful documentation with Mylyn Intent</a>
 </p>
 
 

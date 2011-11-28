@@ -4,9 +4,12 @@
       name="Mylyn Intent">
    <release projectid="mylyn.docs.intent" version="0.7"/>
    <introduction>
-     <html:div xmlns="http://www.w3.org/1999/xhtml">Mylyn Intent is an open source <b>documentation environment</b>, that allows you to <b>keep your doc
-	synchronized</b> with any development artifact (Source code, Models, Dependencies...) while being
-	<b>customizable</b> for your development processes (domain specific constraints, syntax or tools...).
+     <html:div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+	     Mylyn Intent is an open source <b>documentation environment</b>, that allows you to <b>keep your doc
+		synchronized</b> with any development artifact (Source code, Models, Dependencies...) while being
+		<b>customizable</b> for your development processes (domain specific constraints, syntax or tools...).
+	</p>
 	</html:div>
    </introduction>
    <release_deliverables>
@@ -24,6 +27,7 @@
          Please refer to the <a href="http://www.eclipse.org/projects/project-plan.php?projectid=mylyn#release_milestones">Mylyn plan</a> for release milestones.   
          </html:div>
       </preamble>
+      <milestone date="2012-01-26" milestone="0.7 M4"> <html:div>Mylyn Intent 0.7 M4</html:div></milestone>
       <postamble><html:div xmlns="http://www.w3.org/1999/xhtml"></html:div></postamble>
    </release_milestones>
    <target_environments>
@@ -38,17 +42,16 @@
    <themes_and_priorities>
      <preamble>
          <html:div xmlns="http://www.w3.org/1999/xhtml">The main priority for Intent 0.7 is to provide the miminal set of features allowing to document
-         your softwares effeciently.
+         your softwares efficiently.
          </html:div>
      </preamble>
      <theme name="Improving the retro-documentation of existing code/models">
-        <description>Define code completion and merging mechanism from doc to code.</description>
+        <description> <html:div>Define code completion and merging mechanism from doc to code.</html:div></description>
         <proposed bugzilla="https://bugs.eclipse.org/bugs/show_bug.cgi?id=364088"/>
-       <proposed bugzilla="https://bugs.eclipse.org/bugs/show_bug.cgi?id=364091"/>
      </theme>
      <theme name="Define an export mechanism for the Intent document">
-        <description>Define a set of generator allowing to export the Intent document to HTML, PDF... 
-        The exported doc should provide navigable links between sections.
+        <description> <html:div>Define a set of generator allowing to export the Intent document to HTML, PDF... 
+        The exported doc should provide navigable links between sections.</html:div>
         </description>
      </theme>
    </themes_and_priorities>

@@ -47,7 +47,6 @@
      </preamble>
      <theme name="Improving the retro-documentation of existing code/models">
         <description> <html:div>Define code completion and merging mechanism from doc to code.</html:div></description>
-        <proposed bugzilla="https://bugs.eclipse.org/bugs/show_bug.cgi?id=364088"/>
      </theme>
      <theme name="Define an export mechanism for the Intent document">
         <description> <html:div>Define a set of generator allowing to export the Intent document to HTML, PDF... 

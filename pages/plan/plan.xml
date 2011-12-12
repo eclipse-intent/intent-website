@@ -45,6 +45,10 @@
          your softwares efficiently.
          </html:div>
      </preamble>
+     <theme name="Support for Eclipse 3.8 workbench">
+        <description> <html:div>We will support 3.8 as well as 4.2, but the exact functionality may differ.</html:div>
+        </description>
+     </theme>
      <theme name="Improving the retro-documentation of existing code/models">
         <description> <html:div>Define code completion and merging mechanism from doc to code.</html:div></description>
      </theme>

@@ -1,0 +1,303 @@
+
+Hi everyone, I'm Alex Lagarde, and I'm working as a software engineer at Obeo, a french Strategic Member of Eclipse.
+
+Specialized in the MDA approach, Obeo provides solutions to industrialize each stage of the application life cycle : code generation, migration, refactoring,... We are very active in the Eclipse community, leading popular projects like Acceleo, EMF Compare, EEF, ATL...
+
+h1. Intent in a Nutshell
+
+Today I'm going to talk about Intent, an open-source documentation environment integrated to Eclipse.
+
+As I'll explain later, the main issue with any documentation is that it quickly becomes outdated in regards to the code. That's why the main purpose of Intent is to provide tooling for keeping your documentation synchronized with any concrete development artifact (whether it's Java code, Models, dependencies between plugins, a code example on the Internet...).
+
+With Intent, we also wanted to put documentation in a central place of software development. Following the Eclipse mantra "be extensible, be customizable, be integrated", Intent will allow you to pimp your doc according to your specific needs
+
+The Intent project is currently in incubation phase under the Mylyn-Docs component. Intent 0.7 is part of the Eclipse Juno release train, and M6 is waiting for your feedback.
+
+h1. Is doc useless ?
+
+I know what you are about to say  : « Oh no, why a new documentation tooling ? Doc is useless»
+
+Well, you're kind of right, and I'm sure that any developer have already experienced it : documentation can be useless. It is often outdated and never accurately describes your software, so few people actually uses it.
+
+
+h2. Agile Documentation
+
+h3. Should we write documentation ?
+
+So let's ask us a simple question then : "Should we write Documentation ?".
+
+The "Manifesto for Agile Software Development" (agilemanifesto.org) promotes the value of "Working software over comprehensive documentation". 
+
+But I think this sentence is often misunderstood : it just means that the best documentation in the world is no excuse if the project fails to deliver a working software. But you will still have to create just enough documentation to get by. 
+
+On extremely rare occasions that may mean you create  no documentation at all, perhaps on a very small projects.  But for the vast majority of projects you need to create some documents. 
+
+===================
+
+First of all, there are a lot of situations in which basic agile documentation based on user stories alone may come up short :
+For example, many business-critical projects, such as commerce applications or portals, are now adopting agile practices on their projects. In these projects, it's common to have an outside agile development shop creating the application, that then will be handed over either to the hiring company itself or to another third party vendor for ongoing maintenance. In this case you obviously need documentation so that maintenance can be performed.
+
+----------------
+And the main reason is that being Agile does not mean being short-sighted : although it is true that a lot of informations exchanged by the team are only important on the spur of the moment, and hence does not need to be kept, 
+all informations that will be relevant a couple of months or years later cannot be captured by verbal communication, and requires to be committed on paper.
+
+Remember that if your team's primary goal is indeed to develop software, the secondary goal is to enable your next effort, 'preparing for the next game' as Cockburn would say. Documents can preserve knowledge within a team, and prevent the team from re-inventing things when team members leave and new people join. Documents can capture expertise gained in one project and make it available to future projects.
+
+This can be summed up by a simple sentence :   
+ KNOWLEDGE THAT MUST BE PRESERVED FOR THE FUTURE IS WORTH DOCUMENTING.
+ 
+
+
+h3. Toward an Agile Documentation
+
+So we see than instead of discarding documentation, we have to think about what we are doing, and create just enough documentation to get by. Each Document that we judge necessary can only prove useful if they are of high quality.
+
+To achieve this goal, Eric Ries defined an Agile Documents as a document meeting the following criteria : 
+
+- fulfill a purpose : if you do not know why you are creating a document, or who is going to actually read it, then you should stop and rethink what you are doing.
+
+- describe "good things to know" : critical information that is not readily obvious such as design rationale or requirements.  Agile documents do not capture obvious information.  For example, documentation indicating that the F_NAME column of the CUSTOMER table captures the first name of a customer really doesn’t provide a lot of value to the reader. However, documentation indicating that due to regulatory reasons the data of customers residing in Canada have to be stored in a specific way is likely good information to know.
+
+- maximize stakeholder Return on Investment : 
+the benefits provided by an agile document should be greater than the investment in its creation and maintenance
+
+h3. Agile Documents Update
+
+we can mesure the quality of an Agile Document thanks to the CRUFT metric :  
+* C = The percentage of the document that is currently “correct".
+* R = The chance that the document will be read by the intended audience.
+* U = The percentage of the document that is actually understood by the intended audience.
+* F = The chance that the material contained in document will be followed.
+* T = The chance that the document will be trusted. (=> INTENT)
+
+
+In order to keep a good CRUFT, an Agile Documents document must be able to respond to changes. In other words, we must be able to update it when the stakeholders needs or the software code change. As I said earlier, it is very important that the few documentation we decided to create is accurate and up-to-date.
+
+There are different strategies to determine when it is the best time to update documentation : 
+
+- If you follow a Document Late best practice, you will create and update documents as late as possible, often just before you need to actually deliver them. This strategy is based on common cense : wait until the information has stabilized before you capture it inside documentation. However, you may have a lot of changes to report, and hence you multiply the risk of forgetting to update some documentation parts.
+
+- Another, more disciplined approach, is to document continuously as you go.
+  The challenge is that any documentation that you write needs to evolve over time in sync with your code. 
+
+- If you follow the Update Only When It Hurts practice, then you will update the documentation only when a reader is being inordinately harmed, including a significant loss of productivity, because the documentation is not updated.
+
+All these practices require to be able to update all the documentations parts related to a change (in requirement, in design, in code).
+
+h3. An inconvenient Truth
+
+But that is the inconvenient truth about documentation , and I think any developer who had to maintain their documentation up-to-date with the changes made on their software will agree :  doc update is quite a burden. When you make a modification on the code, how many of you take the time to browse through the hundred of pages of documentation just to find where to document this change, and check the whole doc consistency  afterward ?
+
+No one. So eventually your documentation will get unsynchronized. Your document's CRUFT will start to ----increase-----, and your document will stop being Agile, as not only you're not able to make it easily react to changes, but in addition you break the skateholder ROI rule.
+
+So your documentation becomes useless, although you spent a lot of time creating and maintining it. Isn't that just the opposite of what being Agile means ?
+
+h2. Keep your doc synchronized
+
+So we can see that if documentation is often discarded or underestimated by Agile methods, it is because of its maintenance, which is both expensive and painful.
+
+That is exactly why the main purpose of Intent is to provide tooling for easily keeping your doc synchronized with your technical artifacts.
+
+I don't know if you're familiar with the "Ad-hoc Corrections" pattern defined by Charles Weir, which tries to answer this problematic with a team best practice.
+
+All the team shares a master copy of the documentation on paper. Any time a developer makes a change on the software that deviate from design (and hence requires a documentation update), he must write a correction in the margin of the master copy, indicating the documentation parts that have to be updated.
+
+//When the documentation reviewer decides to update the documentation (whether it's continuously, late or when it hurts), he has a //list of all the documentation parts that needs to be updated. 
+
+Well that's exactly what Intent synchronization mechanism is about : when you make a change in code that impacts the documentation, Intent will detect that a change occurred, and place synchronization errors in the documentation parts that are related to the changed artifacts.
+
+h3. Literate Modeling
+
+In order to achieve that goal, we defined the Literate Modeling approach.
+
+It's based on Donald Knuth's Literate Programming theory. The main idea of this work is to mix explanations in natural language with code in a same document, the Literate Program. With this structure, it is way easier to explain a part of code you have above your eyes, and to retrieve the doc related to a code part.
+
+For the Literate Modeling approach, we have decided to use model fragments instead of code, as models are way more generic than code.
+
+h3. Instead of
+
+Basically, instead of having many documentation files (like openoffice or Textile documents) on one side, and many technical artifacts on the other side, with no links between them...
+
+h3. One Intent Doc 
+
+...we have one single Intent document mixing both:
+
+- This document contains explanations in natural language written with any Wikitext syntax
+
+h3. Referencing artifacts
+
+- It also contains Model fragments, defined with a generic textual syntax. It is these model fragments that allow us to link the doc with concrete artifacts.
+
+This structure allows us to keep documentation close to the models it explains.
+
+Consequently, we can easily determine :
+- for a given model element, which part of the doc explains it
+- for a given requirement, which model elements have been designed to fulfill it
+
+h3. Contributing to existing elements
+
+A very important feature of this generic textual syntax is the contribution concept. It allows us to contribute to an element defined elsewhere.
+
+For example, I can define in a first model fragment a new feature for Intent, called synchronizer. Here I just want to give a very high-level overview of the synchronization mechanism. So I just say that it is not an UI Feature, and that it is implemented by some java class.
+
+In another section, that could be located before or after this definition, I contribute to the definition of my Intent feature by adding technical considerations (for example that the Synchronization delegates ... to a Job).
+
+h3. Split Doc accros concerns
+
+This contribution mechanism allows us to split the design across concerns, free from any structural constraint due to our implementation language.
+
+This improves the readability of your doc, as your reader will be able to have a step by step reading. This also improves the readability of your code , as you can focus on the parts of the code that fulfills the concern that interests you right now.
+
+Let's take a concrete example. On one side, you've got the Intent document I use to document the Intent code. On the other side, you've got Intent code itself. 
+In a first section, that gives a very high-level overview of the synchronization, I do not enter into technical details, focusing on describing what is synchronization (defining requirements and high-level architecture).
+-------
+In another part of the documentation, related to the Implementation of the synchronizer, I present the code that I've wrote and all my technical choices.
+------
+In a chapter focusing on Intent extensibility, I present the code I wrote to make my synchronizer extensible.
+------
+The Intent User Guide is just a chapter of my Intent document. I contribute to my synchronizer feature by explaining how synchronization issues are displayed to the end-user. I can link this information with image files, so that when I change the code I can be warned that I have to update the screenshots of my User Guide.
+
+h3. demo
+
+OK, so now that you saw Intent syntax let's see how Intent can help you keep your doc synchronized with a short example.
+
+Let's say we are developing a web portal, called *Offers.com*, that allow users to purchase items on-line.
+Each item of the portal is associated to an offer type, defining  the target customers and availability conditions.
+
+During an iteration, the customer wants us to introduce a new offer type, the Special Promotion Offer Type, that allows to propose  temporary discount on items.
+ 
+=> start
+
+So, the first thing we have to do is to capture this information inside our documentation.
+
+...
+Following Mylyn spirit of "loading of your brain",  
+...
+
+=> a la fin : 
+You can see that you have a marker on the Intent project.
+According to the Documentation Update Practice you're following, you can decide to fix the synchronization issue right away, when the iteration ends or when readers complain. 
+
++ phrase conclu
+
+h3. Synchronization : 1
+
+How does this synchronization mechanism work ? Well it's quite simple : the Intent Synchronizer compares (using EMFCompare) the Model fragments contained in the documentation with the technical artifacts (represented as models). If differences are found, the synchronizer displays synchronization issue markers, and quick-fixes are provided to help the user fix this issue.
+
+h3. Synchronization : 2
+
+This synchronization mechanism is totally extensible : you will be able to synchronize any kind of artifact with the documentation, as long as the corresponding Synchronization Bridge has been written.
+
+To write your own synchronization bridge, you only have to : 
+   - Be able to represent a specific kind of technical artifact (for example Java Classes) as a model 
+   - Be able to detect when a change occur on this kind of technical artifact. This feature is optional, and allows Intent to detect synchronization issues in real-time
+
+I invite you to check the Intent wiki if you want more information about how to provide your own synchronization bridge.
+
+h2. Automate Constraint Checking
+
+OK so now you are able to make your documentation react to changes.
+
+But Intent is much more than a synchronization tool : as it is a bridge between technical artifacts and high-level concerns, this is a perfect way to provide tooling for checking high-level constraints on your software.
+
+h3. Automate high-level constraints checking
+
+As a mater of fact, I'm sure that you already have high-level constraints on your software : your team shares the same dev guidelines, processes and good practices. But most of the time these constraints are not explained formally : they are just oral recommendation or documents located somewhere.
+
+Consequently, reviewing the code to check thse constraints is a very hard and painful job,
+// and can lead you to endorse the bad role when you have to explain to your developers that they do not code like you want them //to.
+ Moreover, as these constraints are not expressed formally you are never sure that you fulfilled all them.
+
+Intent provides tooling for checking automatically these constraints and guidelines.
+
+h3. Automate high-level constraints checking 2 
+
+Thanks to a validation framework, you will be able to make sure that the whole team follows rules YOU judge as important.
+
+Contrary to checkstyle, such standards can be independent from code.
+
+Here are some examples of constraints you can plug in Intent to control your software consistency :
+
+- Depency-relative : any Action displayed to end-user should be exported to API
+
+- Test coverage : any Action displayed to end-user should be covered by at least one SWTBot test
+
+- Doc related : any Action displayed to end-user should be presented inside the User Guide with a screenshot
+
+Such rules make the team stick to your own standards & processes automatically. In result, you'll spend less time reviewing the code, and will be able to focus on the dev itself.
+
+What is more, you can capitalize on your experience thanks to these constraints : once you defined custom validation rules on a project, ask yourself which ones are applicable to your next project. 
+
+h3. Demo 2
+
+This Validation mechanism, coupled with the Synchronization mechanism, will allow Intent to guide your development.
+
+Let's continue our previous example. The customer decides to add a multilingual support to the *Offers.com* platform.
+
+It means that all messages that are displayed to the end-user must be externalized. So I've written a new Custom Validation Rule for Intent, that checks String externalization.
+
+...
+
+- no synchronization issue, which means that my documentation is now up-to-date with my code 
+- no validation issue, which means that I've fulfilled the dev guidelines. So now I can commit.
+
+h2. What's cooking ?
+
+Ok so now that you saw what Intent looks like, let's see what we have in mind for the next releases.
+
+
+h3. Documentation Export
+
+First of all, we're currently working on a documentation export mechanism. The exported Intent document provides useful informations like indexes to quickly get the doc parts related to any concept, links between sections...
+
+h3. What's cooking 2
+
+We'll also work on the Intent editor stabilisation, and provide new features like a preview view (a bit like wikitext), where both textual explanations and model fragments will be rendered in a user-friendly form. We're also planning to support drag and drop, so that when you drag a Java class inside an Intent document, the Model fragments describing this class can be created automatically.
+
+We'll also provide an integration with DOT/Zest, to allow you to define diagrams directly inside Intent documents.
+
+We'll work hard on extensibility, so you can provide your own validation or synchronization quick-fixes. If you think about the demo, this can be a quick-fix that allows you to externalize the OfferType description in one-click when a synchronization issue is detected.
+
+You will also be able to provide your own syntax and editors for documentation or to define model fragments (you may use an XCore editor if you are defining ECore models, Xdoc to write your pure documentation zones...).
+
+h3. Mylyn Task Integration
+
+We are eager to integrate Mylyn Tasks and Intent.
+
+A first step will be to embed Intent Document inside Mylyn contexts. The major benefit compared to textile files is that you will only embed the documentations parts that are actually related to your tasks, and not the whole file. 
+
+//This integration seems quite easy as in fact, an Intent Document is stored as a model, and not a textual file. So we can use the //Mylyn bridge for modeling.
+
+We would also like to be able to reference Mylyn Tasks inside Intent documents. That would allow to apply validation rules on any tasks : for example, a bugzilla issue should not be closed if the test has not been written.
+
+h3. Collaborative features
+
+One other major concern of Intent is collaboration, which is in the heart of the documentation process.
+
+I did not have time to talk about it, but in fact intent relies on a distributed architecture. We have a central repository, in which we store the Intent document as a model, and many other useful information (like all the compilation and synchronization issues or traceability informations).
+
+Each feature of Intent is managed by a client of this repository : the eclipse editor is just one among many. The synchronizer, compiler, indexer, doc exporter are also clients, that communicate through a notification mechanism ensured by the Repository. We can perfectly imagine an Orion-based Editor connected to such a repository.
+
+This repository concept is totally abstract, and can be developed with many concrete back-ends. For now, our repositry is an hidden folder in the eclipse workspace, but we would also like to define a CDO-based Intent Repository. In a nutshell, CDO allows live sharing of models, with real-times updates and lock management to avoid conflicts.
+
+With a CDO back-end, many users would be able to read and edit a same document, and collaborate in real-time (a bit like Google doc). We could use a pessimist locking approach to avoid any conflict on the documentation.
+
+We have many other ideas in mind, and we would be glad to discuss with you to determine which would fit your needs.
+
+h2. Intent needs you
+
+I would like to conclude with the most important message of this talk : Intent needs you !
+
+As mylyn is known to be very open to contribution, we would really like to put users and external developers in the heart of Intent development.
+
+Our purpose is to make developers write doc and enjoy it, and we really think it's possible with the help of the Eclipse community.
+
+First of all, you can download Intent and give us feedback. Do not hesitate to tell us if you do not believe in this project, and why you don't.
+
+It would be very interesting to provide off-the-shell synchronizers and validators that would help all Eclipse developers. To do so, we will need to determine together what are the best practices and what constraints do we want to define on our softwares.
+
+We are also very open to technical contributions : 
+   - define your own synchronization bridges that fit your needs, we will integrate it to intent 
+   - provide custom validation rules, if they are generic we will integrate them to the default validation rules 
+   - implement your own Back-end 
+   - define your own clients (Orion editor...)

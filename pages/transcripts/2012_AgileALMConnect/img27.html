@@ -17,9 +17,9 @@
 <p style="direction:ltr;"></p>
 <p style="direction:ltr;">Each feature of Intent is managed by a client of this repository : the eclipse editor is just one among many. The synchronizer, compiler, indexer, doc exporter are also clients, that communicate through a notification mechanism ensured by the Repository. We can perfectly imagine an Orion-based Editor connected to such a repository.</p>
 <p style="direction:ltr;"></p>
-<p style="direction:ltr;">This repository concept is totally abstract, and can be developed with <b>many concrete back-ends</b>. For now, our repositry is an hidden folder in the eclipse workspace, but we would also like to define a CDO-based Intent Repository. If you do not know CDO, you should not have came here as it is being presented right now by Eike Stepper. In a nutshell, CDO allows live sharing of models, with real-times updates and lock management to avoid conflicts.</p>
+<p style="direction:ltr;">This repository concept is totally abstract, and can be developed with <b>many concrete back-ends</b>. For now, our repositry is an hidden folder in the eclipse workspace, but we would also like to define a CDO-based Intent Repository. If you do not know CDO, you should definitely check the <a href="http://wiki.eclipse.org/CDO">CDO documentation</a>. In a nutshell, CDO allows live sharing of models, with real-time updates and lock management to avoid conflicts.</p>
 <p style="direction:ltr;"></p>
-<p style="direction:ltr;">With a CDO back-end, many users would be able to read and edit a same document,
+<p style="direction:ltr;">With a CDO back-end, many users would be able to read and edit the same document,
  and collaborate in real-time (a bit like Google doc). We could use a pessimist locking approach to avoid any conflict on the documentation.</p>
 <p style="direction:ltr;"></p>
 <p style="direction:ltr;">We have many other ideas in mind, and we would be glad to discuss with you to determine which would fit your needs.</p>

@@ -18,7 +18,8 @@
 <p> You will find here the transcripts of all Intent talks. </p>
 
 <p>
-<a href="./pages/transcripts/2011_EclipseConEurope/Intent_ece2011.htm">EclipseCon Europe 2011 : Create useful documentation with Mylyn Intent</a>
+<a href="http://www.eclipse.org/intent/pages/transcripts/2012_AgileALMConnect/Intent_AgileALMConnect2012.htm">Agile ALM Connect 2012 : Create useful documentation with Mylyn Intent</a>
+<a href="http://www.eclipse.org/intent/pages/transcripts/2011_EclipseConEurope/Intent_ece2011.htm">EclipseCon Europe 2011 : Create useful documentation with Mylyn Intent</a>
 </p>
 
 

@@ -17,6 +17,7 @@
        <ul>
        	   <li><b>Mylyn Intent</b> : Intent authoring environment (Workspace mode - editor, compiler, synchronizer, project wizards, doc generator...)</li>  
            <li><b>Doc generators For Wikitext</b> : A set of generators for Wikitext documents (Latex, html...)</li> 
+           <li><b>Doc generators For Intent document</b> : A set of generators allowing to export an Intent Project to several formats (HTML Bootstrap...)</li> 
        </ul>        
      </html:div>
    </release_deliverables>

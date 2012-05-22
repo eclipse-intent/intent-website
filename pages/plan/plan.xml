@@ -50,8 +50,8 @@
         <description> <html:div>We will support 3.8 as well as 4.2, but the exact functionality may differ.</html:div>
         </description>
      </theme>
-     <theme name="Improving the retro-documentation of existing code/models">
-        <description> <html:div>Define code completion and merging mechanism from doc to code.</html:div></description>
+     <theme name="Improving Intent authoring environment">
+        <description> <html:div>Improve Intent editor stability and features (code completion, syntax highliting...).</html:div></description>
      </theme>
      <theme name="Define an export mechanism for the Intent document">
         <description> <html:div>Define a set of generator allowing to export the Intent document to HTML, PDF... 

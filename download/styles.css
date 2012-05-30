@@ -1,0 +1,108 @@
+body {
+	text-align: center;
+}
+
+#leftcol {
+	margin-top: -20px;
+}
+
+#midcolumn {
+	width: 703px;
+	margin-top: -36px;
+	margin-right: 0;
+	margin-left: -20px;
+	padding-top: 20px;
+	padding-right: 50px;
+	padding-left: 40px;
+}
+
+.sideitem {
+	background: url(/eclipse.org-common/themes/Nova/images/thinModalBg.png)
+		repeat-x scroll 0 0;
+}
+
+.sideitem h6 {
+	color: #575757;
+	font-size: 20px;
+	padding-top: -6px;
+}
+
+.areaIcon {
+	margin-left: 50px;
+}
+
+#leftnav li.separator {
+	margin-top: 20px;
+}
+
+#leftnav li.separatorNolink {
+	margin-top: 20px;
+	margin-left: 0;
+	padding-top: 5px;
+	padding-right: 0;
+	list-style-image: none;
+	border-top: 1px dotted #d4d4dd;
+	font-size: 12px;
+	font-weight: bold;
+	color: #575757;
+}
+
+#leftnav li.selected {
+	list-style-image:
+		url(/eclipse.org-common/themes/Nova/images/leftNavSelected.png);
+}
+
+#infoDiv {
+	margin-top: 80px;
+	margin-left: 45px;
+	width: 300px;
+	text-align: left;
+	font-size: 14px;
+	float: left;
+}
+
+.linkBlock {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	float: left;
+	width: 460px;
+}
+
+.link img {
+	position: relative;
+	top: -20px;
+	float: left;
+	padding: 5px;
+}
+
+.link {
+	clear: both;
+	padding: 20px;
+}
+
+.link p.heading {
+	font-size: 16px;
+}
+
+.link p.subText {
+	font-size: 12px;
+}
+
+li p.heading {
+	font-size: 120%;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	text-align: left;
+}
+
+li p.subText {
+	margin-top: 0px;
+	font-size: 80%;
+	text-align: left;
+	font-weight: normal;
+}
+
+.relatedLinks li {
+	list-style-image: none !important;
+}

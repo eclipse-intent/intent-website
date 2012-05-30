@@ -1,0 +1,69 @@
+#midcolumn {
+	background: url('background.jpg') top left repeat-x;
+}
+
+#midcolumn li .repo-item {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.repo-item {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.repo-label1 { 
+  color: #000000;
+  font-size: 18pt;
+}
+
+.repo1 {
+	padding: 5px 5px 5px 0;
+  border-bottom: 3px solid #D4D4DD;
+}
+
+.repo-label2 { 
+  color: #000000;
+  font-size: 14pt;
+}
+
+.repo2 {
+	padding: 5px 5px 5px 0;
+}
+
+.drop-label { 
+  color: #000000;
+  font-size: 12pt;
+  font-weight: bold;
+	margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.drop {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 5px 5px 0px 0;
+}
+
+.drop-info {
+	padding-top: 3px;
+}
+
+.drop-separator {
+	border: none;
+	border-bottom: 2px solid #D4D4DD;
+}
+
+.file-size {
+	text-align: right;
+}
+
+.level1 {
+	padding-right: 49px;
+}
+
+.level2 {
+	padding-right: 26px;
+}

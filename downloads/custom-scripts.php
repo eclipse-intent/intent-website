@@ -106,13 +106,13 @@
 			$releaseList .= "<li class=\"repo-item\">\n";
 			$releaseList .= "<a href=\"javascript:toggle('repo_releases')\" class=\"repo-label1\">Releases</a>";
 			$releaseList .= "<a name=\"releases\" href=\"#releases\">";
-			$releaseList .= "<img src=\"" . $websiteRoot . "/images/link_obj.gif\" alt=\"Permalink\" width=\"12\" height=\"12\"/>";
+			$releaseList .= "<img src=\"" . $websiteRoot . "/images/download/link_obj.gif\" alt=\"Permalink\" width=\"12\" height=\"12\"/>";
 			$releaseList .= "</a>\n";
 			$releaseList .= "<div class=\"repo1\" id=\"repo_releases\">\n";
 			
 			$releaseList .= "<table border=\"0\" width=\"100%\">\n";
 			$releaseList .= "<tr class=\"repo-info\">";
-			$releaseList .= "<td><img src=\"" . $websiteRoot . "/images/22/package-x-generic.png\" alt=\"composite update site\"/></td>";
+			$releaseList .= "<td><img src=\"" . $websiteRoot . "/images/download/22/package-x-generic.png\" alt=\"composite update site\"/></td>";
 			$releaseList .= "<td><b><a href=\"http://download.eclipse.org/" . $PR . "/updates/releases\">Update Site</a></b> for use with <a href=\"http://help.eclipse.org/indigo/index.jsp?topic=/org.eclipse.platform.doc.user/tasks/tasks-127.htm\">p2</a>.</td>";
 			$releaseList .= "<td class=\"file-size level1\"></td>";
 			$releaseList .= "</tr>\n";
@@ -125,7 +125,7 @@
 			
 				$releaseList .= "<li  class=\"repo-item\">\n";
 				$releaseList .= "<a href=\"javascript:toggle('repo_releases_" . $htmlVersion . "')\" class=\"repo-label2\">" . $version . " Releases</a>";
-				$releaseList .= "<a name=\"releases_" . $htmlVersion . "\" href=\"#releases_" . $htmlVersion . "\"><img src=\"" . $websiteRoot . "/images/link_obj.gif\" alt=\"Permalink\" width=\"12\" height=\"12\"/></a>\n";
+				$releaseList .= "<a name=\"releases_" . $htmlVersion . "\" href=\"#releases_" . $htmlVersion . "\"><img src=\"" . $websiteRoot . "/images/download/link_obj.gif\" alt=\"Permalink\" width=\"12\" height=\"12\"/></a>\n";
 				
 				$releaseList .= "<div class=\"repo2\" id=\"repo_releases_" . $htmlVersion . "\"";
 				if ($display) {
@@ -136,7 +136,7 @@
 				
 				$releaseList .= "<table border=\"0\" width=\"100%\">\n";
 				$releaseList .= "<tr class=\"repo-info\">";
-				$releaseList .= "<td><img src=\"" . $websiteRoot . "/images/16/package-x-generic.png\" alt=\"composite update site\"/></td>";
+				$releaseList .= "<td><img src=\"" . $websiteRoot . "/images/download/22/package-x-generic.png\" alt=\"composite update site\"/></td>";
 				$releaseList .= "<td><b><a href=\"http://download.eclipse.org/" . $PR . "/updates/releases/" . $version . "\">Update Site</a></b> for use with <a href=\"http://help.eclipse.org/indigo/index.jsp?topic=/org.eclipse.platform.doc.user/tasks/tasks-127.htm\">p2</a>.</td>";
 				$releaseList .= "<td class=\"file-size level2\"></td>";
 				$releaseList .= "</tr>\n";
@@ -177,7 +177,7 @@
 				$buildList .= "<li class=\"repo-item\">\n";
 				$buildList .= "<a href=\"javascript:toggle('repo_" . $htmlVersion . "')\" class=\"repo-label1\">" . $version . " Builds</a>";
 				$buildList .= "<a name=\"builds_" . $htmlVersion . "\" href=\"#builds_" . $htmlVersion . "\">";
-				$buildList .= "<img src=\"" . $websiteRoot . "/images/link_obj.gif\" alt=\"Permalink\" width=\"12\" height=\"12\"/>";
+				$buildList .= "<img src=\"" . $websiteRoot . "/images/download/link_obj.gif\" alt=\"Permalink\" width=\"12\" height=\"12\"/>";
 				$buildList .= "</a>\n";
 				
 				$buildList .= "<div class=\"repo1\" id=\"repo_" . $htmlVersion . "\"";
@@ -195,7 +195,7 @@
 					$buildList .= "<li class=\"repo-item\">\n";
 					$buildList .= "<a href=\"javascript:toggle('repo_" . $htmlBranch . "')\" class=\"repo-label1\">" . $branch . "</a>";
 					$buildList .= "<a name=\"builds_" . $htmlBranch . "\" href=\"#builds_" . $htmlBranch . "\">";
-					$buildList .= "<img src=\"" . $websiteRoot . "/images/link_obj.gif\" alt=\"Permalink\" width=\"12\" height=\"12\"/>";
+					$buildList .= "<img src=\"" . $websiteRoot . "/images/download/link_obj.gif\" alt=\"Permalink\" width=\"12\" height=\"12\"/>";
 					$buildList .= "</a>\n";
 					
 					$buildList .= "<div class=\"repo2\" id=\"repo_" . $htmlBranch . "\"";
@@ -214,7 +214,7 @@
 						$buildList .= "<li class=\"repo-item\">\n";
 						$buildList .= "<a href=\"javascript:toggle('repo_" . $htmlBranch . "_" . $type . "')\" class=\"repo-label1\">" . $branch . " " . $typeLabel . " Builds</a>";
 						$buildList .= "<a name=\"builds_" . $htmlBranch . "_" . $type . "\" href=\"#builds_" . $htmlBranch . "_" . $type . "\">";
-						$buildList .= "<img src=\"" . $websiteRoot . "/images/link_obj.gif\" alt=\"Permalink\" width=\"12\" height=\"12\"/>";
+						$buildList .= "<img src=\"" . $websiteRoot . "/images/download/link_obj.gif\" alt=\"Permalink\" width=\"12\" height=\"12\"/>";
 						$buildList .= "</a>\n";
 						
 						$buildList .= "<div class=\"repo2\" id=\"repo_" . $htmlBranch . "_" . $type . "\"";
@@ -263,7 +263,7 @@
 		$buildHTML = "<li class=\"repo-item\">\n";
 		// PENDING add alias if any in the displayed text
 		$buildHTML .= "<b><a href=\"javascript:toggle('drop_" . $ID . "')\" class=\"drop-label\">" . $branch . " (" . $dateFormat . ")</a></b>";
-		$buildHTML .= "<a name=\"" . $ID . "\" href=\"#" . $ID . "\"><img src=\"" . $websiteRoot . "/images/link_obj.gif\" alt=\"Permalink\" width=\"12\" height=\"12\"/></a>\n";
+		$buildHTML .= "<a name=\"" . $ID . "\" href=\"#" . $ID . "\"><img src=\"" . $websiteRoot . "/images/download/link_obj.gif\" alt=\"Permalink\" width=\"12\" height=\"12\"/></a>\n";
 		$buildHTML .= "<div class=\"drop\" id=\"drop_" . $ID . "\"";
 		if ($display) {
 			$buildHTML .= ">\n";
@@ -275,7 +275,7 @@
 		
 		// UPDATE SITE
 		$buildHTML .= "<tr class=\"repo-info\">";
-		$buildHTML .= "<td><img src=\"" . $websiteRoot . "/images/22/package-x-generic.png\" alt=\"composite update site\"/></td>";
+		$buildHTML .= "<td><img src=\"" . $websiteRoot . "/images/download/22/package-x-generic.png\" alt=\"composite update site\"/></td>";
 		$buildHTML .= "<td><b><a href=\"http://download.eclipse.org/" . $PR . "/updates/" . $typeUpdateSite . "/" . $version . "/" . $ID . "\">Update Site</a></b> for use with <a href=\"http://help.eclipse.org/indigo/index.jsp?topic=/org.eclipse.platform.doc.user/tasks/tasks-127.htm\">p2</a>.</td>";
 		$buildHTML .= "<td class=\"file-size level3\"></td>";
 		$buildHTML .= "</tr>\n";
@@ -285,7 +285,7 @@
 		// ARCHIVED UPDATE SITE
 		if ($archivedSite != "") {
 			$buildHTML .= "<tr class=\"drop-info\">";
-			$buildHTML .= "<td><img src=\"" . $websiteRoot . "/images/16/package-x-generic.png\" alt=\"archived update site\"/></td>";
+			$buildHTML .= "<td><img src=\"" . $websiteRoot . "/images/download/16/package-x-generic.png\" alt=\"archived update site\"/></td>";
 			$buildHTML .= "<td><a href=\"http://www.eclipse.org/downloads/download.php?file=/" . $PR . "/downloads/drops/" . $branch . "/" . $ID . "/" . $archivedSite . "&amp;protocol=http\">Archived update site</a> for local use with <a href=\"http://help.eclipse.org/indigo/index.jsp?topic=/org.eclipse.platform.doc.user/tasks/tasks-127.htm\">p2</a>.</td>";
 			// PENDING retrieve zip size
 			$buildHTML .= "<td class=\"file-size level3\"><i></i></td>";
@@ -295,7 +295,7 @@
 		// SDK
 		if ($SDKArchive != "") {
 			$buildHTML .= "<tr class=\"drop-info\">";
-			$buildHTML .= "<td><img src=\"" . $websiteRoot . "/images/16/go-down.png\" alt=\"" . $projectTitle . " SDK\"/></td>";
+			$buildHTML .= "<td><img src=\"" . $websiteRoot . "/images/download/16/go-down.png\" alt=\"" . $projectTitle . " SDK\"/></td>";
 			$buildHTML .= "<td><a href=\"http://www.eclipse.org/downloads/download.php?file=/" . $PR . "/downloads/drops/" . $branch . "/" . $ID . "/" . $SDKArchive . "&amp;protocol=http\">" . $projectTitle . " SDK</a></td>";
 			// PENDING retrieve zip size
 			$buildHTML .= "<td class=\"file-size level3\"><i></i></td>";

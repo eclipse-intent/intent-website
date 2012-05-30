@@ -25,11 +25,11 @@
 	# $Nav->setLinkList(array());
 	
 	# Break the navigation into sections
-	$Nav->addNavSeparator("MyProject", 	"/default");
-	$Nav->addCustomNav("Download", "/project/download.php", "_self", 3);
-	$Nav->addCustomNav("Documentation", "/project/documentation.php", "_blank", 3);
-	$Nav->addCustomNav("Support", "/project/support.php", "_blank", 3);
-	$Nav->addCustomNav("Getting Involved", "/project/developers", "_blank", 3);
+	$Nav->addNavSeparator("Intent", 	"/default");
+	$Nav->addCustomNav("Download", "/intent/downloads", "_self", 3);
+	$Nav->addCustomNav("Documentation", "http://wiki.eclipse.org", "_blank", 3);
+	$Nav->addCustomNav("Support", "#", "_blank", 3);
+	$Nav->addCustomNav("Getting Involved", "#", "_blank", 3);
 
 	# Define keywords, author and title here, or in each PHP page specifically
 	$pageKeywords	= "intent, mylyn, doc, documentation, literate, modeling";

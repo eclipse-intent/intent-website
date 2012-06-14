@@ -22,7 +22,7 @@
 		return $builds_temp;
 	}
 	
-	function reorderAndSplitBuilds($oldBuilds, $buildTypes) {
+	function reorderAndSplitBuilds($oldBuilds, $buildTypes, $hiddenBuilds) {
 		$newBuilds = array();
 		$releases = array();
 		
@@ -31,9 +31,20 @@
 			foreach ($types as $type => $names) {
 				if ($type == "R" && isset($oldBuilds[$version][$branch][$type])) {
 					$id = $oldBuilds[$version][$branch][$type][0];
-					$releases[$version][$branch] = $id;
+					if (!isset($hiddenBuilds[$branch]) || !in_array($id, $hiddenBuilds[$branch])) {
+						$releases[$version][$branch] = $id;
+					}
 				} else if (array_key_exists($version, $oldBuilds) && array_key_exists($branch, $oldBuilds[$version]) && array_key_exists($type, $oldBuilds[$version][$branch]) && is_array($oldBuilds[$version][$branch][$type])) {
-					$newBuilds[$version][$branch][$type] = $oldBuilds[$version][$branch][$type];
+					if (isset($hiddenBuilds[$branch])) {
+						$newBuilds[$version][$branch][$type] = array();
+						foreach ($oldBuilds[$version][$branch][$type] as $id) {
+							if (!in_array($id, $hiddenBuilds[$branch])) {
+								$newBuilds[$version][$branch][$type][] = $id;
+							}
+						}
+					} else {
+						$newBuilds[$version][$branch][$type] = $oldBuilds[$version][$branch][$type];
+					}
 					rsort($newBuilds[$version][$branch][$type]);
 				}
 			}
@@ -54,6 +65,17 @@
 		foreach ($zips as $zip) {
 			if (preg_match("/SDK/", $zip)) {
 				return $zip;
+			}
+		}
+		return "";
+	}
+	
+	function getBuildLabel($zips) {
+		// the label is the version number plus its appended alias (if any)
+		foreach ($zips as $zip) {
+			preg_match("/(\d\.\d\.\d)((M|RC)\d)?/", $zip, $matches);
+			if (sizeof($matches) > 0) {
+				return preg_replace("/(\d\.\d\.\d)((M|RC)\d)?/", "$1 $2", $matches[0]);
 			}
 		}
 		return "";

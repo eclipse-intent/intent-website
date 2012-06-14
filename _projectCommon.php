@@ -25,7 +25,7 @@
 	# $Nav->setLinkList(array());
 	
 	# Break the navigation into sections
-	$Nav->addNavSeparator("Intent", 	"/default");
+	$Nav->addNavSeparator("Intent", 	"/intent");
 	$Nav->addCustomNav("Download", "/intent/downloads", "_self", 3);
 	$Nav->addCustomNav("Documentation", "http://wiki.eclipse.org/Intent", "_blank", 3);
 	$Nav->addCustomNav("Support", "#", "_blank", 3);

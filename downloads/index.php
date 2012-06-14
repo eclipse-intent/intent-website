@@ -23,7 +23,7 @@
 	
 	# version => array of qualifiers
 	$hiddenBuilds = array(
-		"0.7.0" => array("R201205301208", "S201205301208"), #release, RC2
+		"0.7.0" => array("R201205301208"), #release, RC2
 	);
 	#### End variables ####
 	

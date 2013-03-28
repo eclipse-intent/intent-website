@@ -1,0 +1,551 @@
+<!--
+Google IO 2012 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+   <link rel="stylesheet" media="all" href="theme/css/custo.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground partTitle" style="background: url(images/Intent/doc/rtfm_car.jpg);background-position:-220px 0px; background-size: 140%;">
+	<h2 style="left:100px;top:0px;"> Documentation Driven Testing</h2>
+	<aside class="gdbar" style="top:50px;width: 1900px;height:80px;">	
+	</aside>
+	
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup style="position:relative;left:-100px;top:250px;padding: 0px 0px 0px 0px;margin:0px 0px 0px 0px;">
+		<div>
+      <h1  style="display:none" data-config-title class="stroke white"><!-- populated from slide_config.json --></h1>
+      <h2  style="display:none" data-config-subtitle class="stroke white"><!-- populated from slide_config.json --></h2>
+	  <br/><br/><br/> <br/><br/><br/><br/>
+	  <p style="font-size:27px" class="stroke white">Goulwen Le Fur <br/>Alex Lagarde (Morel)<br/>Software Engineers, Obeo</p>
+	 	<p style="font-size:27px;width:300px;margin-top:-70px; margin-left:860px"><img src="images/DDT/ec_boston.png" style="width:70%" /></p>
+	  </div>
+    </hgroup>	
+
+  </slide>
+
+  <slide class="intro">
+    <hgroup>
+      <h2>
+		My <b>Problem</b>
+	  </h2>
+    </hgroup>
+    <article class="noBullets">
+		<h3>Developer of the EEF project</h3>
+		<ul> 
+		<li>A presentation framework for EMF</li>
+		<li>Based on SWT</li>
+		<li>An Eclipse Project</li>
+		</ul>
+
+		<h3 >As all software developers, need to create tests</h3>
+		<ul > <li>Especially functional tests</li></ul>
+
+		<h3>GUI testing is never an easy task</h3>
+
+		<h3  >Last stumbling block:</h3>
+		<ul  > 	<li> The need for an Open Source solution</li>
+		</ul>
+		 </p>
+	</article>
+   </slide>
+  <slide class="intro" style="background: url(images/DDT/robot.jpg);background-repeat:no-repeat;background-position:545px 0px;">
+    <hgroup>
+      <h2>
+		First steps toward the solution
+	  </h2>
+    </hgroup>
+
+    <article class="noBullets" >
+		
+		<h3>First event leading to the solution</h3>
+		<ul> 
+		<li> <b>SWTBot</b> project creation</b></li>
+		</ul>
+
+		<h3 >Allows creation of a Bot</h3>
+		<ul > <li>Able to handle SWT GUIs</li></ul>
+		
+		<br/><br/>
+		<h3>A fluent syntax enabling users to define the scenario performed by the bot</h3>
+		<img src="images/DDT/first swtbot.png" style="margin-left:-20px"/>
+		 </p>
+	</article>
+   </slide>
+   
+   <slide class="nobackground">
+    <hgroup>
+      <h2>
+		Great! I have my tests <b>but...</b>
+	  </h2>
+    </hgroup>
+
+		<h3 style="padding-top:20px">Despite of the fluent syntax</h3>
+		<ul> 
+		<li>Tests require many source code</li>
+		<li>Test code is complicated, only developers can write it</li>
+		<li>The tests understanding is only based on JavaDoc</li>
+		</ul>
+		<h3 ><b>Maintenance</b> remains very complicated</h3>		
+		<img src="images/DDT/SWTBot_complicated1.png" style="padding-left:30px;margin-top:-10px"/>
+   </slide>
+   
+  <slide class="segue nobackground partTitle" style="background: url(images/DDT/luther.jpg); background-size: 100%;">
+  <h2 style="top:35px;paddingleft:0px;">I had a dream</h2>
+   <aside style="top:80px;width:500px;" class="gdbar" ></aside>
+   
+   <br/> <br/> <br/>
+    <h3 class="stroke" style="color:white;margin-left:-40px;">A Test framework</h3>
+    <ul class="stroke" style="margin-left:0px;color:white;margin-left:-40px;">
+    <li>Allowing abstraction upon tests scenario (no code)</li>
+    <li>Not only dedicated to developers</li>
+    <li>Ensuring a good documentation level</li>
+    </ul>
+	  
+	 
+  </slide>
+  
+  <slide class="segue nobackground partTitle" style="background: url(images/DDT/army.jpg); background-size: 100%;">
+	  <h2 style="margin-top:-130px;padding-left:0px;color:black;text-shadow:none">Obeo is a software toolmaker!</h2>
+	  <h2 style="margin-top:80px;margin-left:-50px;">So let's make a tooling<br/> above SWTBot!</h2>
+
+  </slide>
+  
+  <slide class="segue nobackground partTitle" style="background: url(images/DDT/easy.jpg); background-size: 100%;">
+	  <h2>1. Simplify tests development <span style="font-size:0px;">_</span></h2>
+	  <aside style="width:925px" class="gdbar" ></aside>
+  </slide>
+     <slide class="part1">
+    <hgroup>
+      <h2>
+		 First approach: <b>Code generation</b>
+	  </h2>
+    </hgroup>
+	<br/><br/>
+		<h3>The idea</h3>
+		<ul><li>Ease the creation of tests with an <b>Acceleo generator</b></li></ul>
+	<br/>
+		<h3>Maintenance is partly ensured by</h3>
+		<img src="images/DDT/Image-Acceleo.png" style="float:right;width:55%;padding-right:100px"/>
+		<ul><li>Generator updates</li></ul>
+		<ul><li>Tests regeneration</li></ul>
+		<br/>
+		<h3>With this solution</h3>
+<ul><li>we are able to produce tests more quickly</li>
+<li>And updating the code generator allows to synchronize all tests with a regeneration</li> </ul>
+
+   </slide>
+
+  <slide class="title-slide segue nobackground partTitle" style="background: url(images/DDT/hurray.jpg);background-size:100%;">    
+	 <h2 style="margin-top:400px;margin-left:450px;font-size:120px">Hurray!</h2>
+  </slide>
+  
+  <slide class="part1">
+  
+  <hgroup>
+      <h2>
+		 But this <b>isn't </b>the end of the story!
+	  </h2>
+    </hgroup>
+	
+	<br/><br/>
+	<img src="images/DDT/not-the-end.jpg" style="float:left;width:35%;margin-right:60px"/>
+		<br/>
+		<h3>The increasing tests amount</h3>
+		<br/>
+		<h3>The increasing functional coverage</h3>
+		<br/>
+		<h3>=> a code generator <b>hard	to maintain</b></h3>
+		<br/>
+  </slide>
+ <slide class="part1">
+ <h2>We need a plan B</h2>
+ <img src="images/DDT/graph.png" style="padding-top:60px; padding-left:150px;width:74%"/>
+ </slide>
+ 
+ <slide class="part1">
+ <h2>Second approach: Tests <b>modeling</b></h2>
+ 
+ <br/><br/>
+ <h3>3 required steps:</h3>
+	<ol style="color:black;padding-left:50px">
+	<li><br/>1. Create a DSL describing functional tests<br/></li>
+	<li><br/>2. Implement it with the Eclipse Modeling Project<br/></li>
+	<li><br/>3. Create a SWTBot interpreter for these test models<br/></li>
+	</ol>
+ </slide>
+ 
+ 
+ <slide class="title-slide segue nobackground partTitle" style="background: url(images/DDT/pen.jpg);background-size:100%;">    
+	 <h2 style="margin-top:350px;margin-left:80px;font-size:60px">What does a Functional Test Model look like ?</h2>
+  </slide>
+  
+  <slide class="part1">
+  <h2>Modeling Bot <i>(I)</i></h2>
+  <br/><br/>
+  <img src="images/DDT/ModelingBotPartI.png"/>
+  </slide>
+   <slide class="part1">
+  <h2>Modeling Bot <i>(II)</i></h2>
+  <br/><br/>
+  <img src="images/DDT/ModelingBotPartII.png"/>
+  </slide>
+  <slide class="part1">
+  <h2>Modeling Bot <i>(III)</i></h2>
+  <br/><br/>
+  <img src="images/DDT/ModelingBotPartIII.png"/>
+  </slide>
+    <slide class="part1">
+  <h2>A Test <b>model</b></i></h2>
+  <br/><br/>
+  <img src="images/DDT/Test-model.png" style="float:left;padding-right:80px"/>
+  <ul>
+	<li>Create a project
+	<li>Create a model</li>
+	<li>Ensure env. Ready</li>
+	<li>In a details page</li>
+	<li>Add a new concept</li>
+	<li>Edit property of this one</li>
+	<li>Save</li>
+	<li>Ensure editing well performed</li>
+	<li>Delete the project</li>
+  </ul>
+  </slide>
+  
+     <slide class="part1">
+  <br/><br/>
+  <img src="images/DDT/awesome.jpg" style="float:right;padding-right:80px"/>
+  <br/><br/><br/><br/>
+  <h2>Awesome but...<br/><br/>How can I use that?</h2>
+  <span style="margin-left:0px" >Using a Treeview to create tests model isn't the best way...</span>
+  </slide>
+  
+  
+   <slide class="segue nobackground partTitle" style="background: url(images/DDT/open.png); background-size: 100%;">
+	  <h2 style="font-size:50px">2. Open the tooling to functional users <span style="font-size:0px;">_</span></h2>
+	  <aside style="width:1005px" class="gdbar" ></aside>
+  </slide>
+ 
+  <slide class="part2">
+  <h2>Toward an accessible tooling</h2>
+  
+  <br/><br/>
+  <h3>This kind of model is well suited for a <b>textual syntax</b></h3>
+	<br/><br/>
+  <h3>Let's use the <img src="images/DDT/Xtext.png" style="width:15%"> project to create a textual syntax for our test DSL</h3>
+  
+  </slide>
+  
+  <slide class=" nobackground">
+  <h2>A <b>Grammar</b> for textual syntax</h2>
+  <br/>
+  <img src="images/DDT/XText grammar.png" style="float:left"/>
+  <img src="images/DDT/TextualModel.png" style="padding-top:100px;float:right"/>
+  </slide>
+     <slide class="segue nobackground partTitle" style="background: url(images/DDT/understand.jpg); background-size: 100%;">
+	  <h2 style="font-size:50px">3. Understand intents behind tests  <span style="font-size:0px;">_</span></h2>
+	  <aside style="width:865px" class="gdbar" ></aside>
+	
+  </slide>
+ <slide class="part3">
+    <hgroup>
+      <h2>
+		Mylyn <b>Intent</b>
+	  </h2>
+    </hgroup>
+    <article class="auto-fadein noBullets">
+		<p>
+		 <img  src="images/Intent/doc/doc_monster.png"  style="float:left;padding-right:15px;width:25%"/> 
+		 <h3 style="color:black"><b>Keeping doc synchronized</b> with Software is a burden</h3>		 
+		 <p>
+		  So you keep breaking specifications without realizing it
+		 </p>
+		 <div style="clear:both"/>
+		  <br/><br/><br/>
+		  <img style="float:left;padding-right:25px;width:23%" src="images/Intent/Image-Intent_logo.png">
+		 <h3 style="color:black">Clear <b>lack of tooling</b> to react to changes</h3>		 
+		 <p>
+			That is exactly what Intent is about
+		 </p>
+	</article>
+   </slide>
+  
+   <slide class="partNONE" style="background: url(images/DDT/instead_of_v2.png); background-size: 90%;background-position:30px 30px;background-color:white; background-repeat : no-repeat;">
+  </slide>
+  
+  <slide class="part3">
+    <hgroup>
+      <h2>
+		One <b>Intent Document</b> mixing both
+	  </h2>
+    </hgroup>
+			<p style="padding-left:50px;padding-top:10px;color:black">
+				<span style="">- Pure documentation zones<br/></span>
+				<br/>
+				<span style">- Formal links zones<br/></span>
+				<br/>
+			</p>
+
+		<div class="intent_content">
+			<b class="kw">Chapter</b> <b>Standard EEF SWT Toolkit</b> {
+				<div class="intent_subsectioncontainer">
+				<div class="du"><br/>
+							The SWT is composed of 7 main widgets:<br/>
+							* Text<br/>
+							* TextArea<br/>
+							* Checkbox<br/>
+							* Radio<br/>
+							* Combo<br/>
+							* Group<br/>
+							* Hbox<br/>
+				</div>
+					<br/><b class="kw">Section</b> <b>The Text widget</b> {
+						<div class="intent_subsectioncontainer">
+								<div class="du"><br/>
+							The text widget allows users to edit <i>_EAttributes_</i> by entering a String value.<br/>
+							The standard use case is to edit an <i>_EAttribute_</i> as an <b>*EString*</b>. <br/>
+							For instance, in this scenario, an user is able do defines the firstname of conference participant using a text widget:
+								</div>
+								<div class="intent_modelingunit">
+								<b class="kw">@M</b><br/>
+								<div class="intent_subsectioncontainer">
+								<b class="kw">@ref</b><i style="color:blue"> "org.eclipse.emf.eef.scenarios/models/setAttributeText.modelingbot"</i>
+									<br/>
+								</div>
+								<b class="kw">M@</b>
+								</div></div>
+							}	
+				</div>
+				}
+				
+			</div>
+			<br/>
+
+  </slide>
+  
+   <slide class="part3">
+    <hgroup>
+      <h2>
+		One <b>Intent Document</b> mixing both
+	  </h2>
+    </hgroup>
+		<p style="padding-left:50px;padding-top:10px;color:black">
+			<span style="">- Pure documentation zones<br/>
+				<span style="padding-left:30px;">Explanations in Natural language<br/></span>
+				<span style="padding-left:30px;">Use the <b>Textile</b> syntax<br/><br/></span>
+			</span>
+		</p>
+		<div class="intent_content">
+<b class="kw">Chapter</b> <b>Standard EEF SWT Toolkit</b> {
+				<div class="intent_subsectioncontainer">
+				<div class="du"><br/>
+							The SWT is composed of 7 main widgets:<br/>
+							* Text<br/>
+							* TextArea<br/>
+							* Checkbox<br/>
+							* Radio<br/>
+							* Combo<br/>
+							* Group<br/>
+							* Hbox<br/>
+				</div>
+					<br/><b class="kw">Section</b> <b>The Text widget</b> {
+						<div class="intent_subsectioncontainer">
+								<div class="du"><br/>
+							The text widget allows users to edit <i>_EAttributes_</i> by entering a String value.<br/>
+							The standard use case is to edit an <i>_EAttribute_</i> as an <b>*EString*</b>. <br/>
+							For instance, in this scenario, an user is able do defines the firstname of conference participant using a text widget:
+								</div>
+								<div class="greyed">
+								<div class="intent_modelingunit" style="background-color:#F8F8F8;color:grey;font-size: 14px;">
+								@M<br/>
+								<div class="intent_subsectioncontainer">
+								@ref "org.eclipse.emf.eef.scenarios/models/setAttributeText.modelingbot"
+									</div>
+								M@
+								</div>
+								</div>
+													
+						</div>}				
+				</div>
+				}
+				
+		</div>
+  </slide>
+  
+    
+  <slide class="part3">
+    <hgroup>
+      <h2>
+		One <b>Intent Document</b> mixing both
+	  </h2>
+    </hgroup>
+		<p style="padding-left:50px;padding-top:10px;color:black">
+			<span style="">- Formal links zones<br/>
+				<span style="padding-left:30px;">Reference to technical artifacts (Java, models, Manifests...)<br/></span>
+				<span style="padding-left:30px;">Extensible behavior (display, hyperlinks, validation...)<br/><br/></span>
+			</span>
+		</p>
+		<div class="intent_content greyed">
+			Chapter Standard EEF SWT Toolkit</b> {
+				<div class="intent_subsectioncontainer">
+				<div class="du"><br/>
+							The SWT is composed of 7 main widgets:<br/>
+							* Text<br/>
+							* TextArea<br/>
+							* Checkbox<br/>
+							* Radio<br/>
+							* Combo<br/>
+							* Group<br/>
+							* Hbox<br/>
+				</div>
+					<br/>Section The Text widget {
+						<div class="intent_subsectioncontainer">
+								<div class="du"><br/>
+							The text widget allows users to edit _EAttributes_ by entering a String value.<br/>
+							The standard use case is to edit an _EAttribute_ as an *EString*. <br/>
+							For instance, in this scenario, an user is able do defines the firstname of conference participant using a text widget:
+								</div>
+								<div class="intent_modelingunit">
+								<b class="kw">@M</b><br/>
+								<div class="intent_subsectioncontainer">
+								<b class="kw">@ref</b><i style="color:blue"> "org.eclipse.emf.eef.scenarios/models/setAttributeText.modelingbot"</i>
+									<br/>
+								</div>
+								<b class="kw">M@</b>
+								</div></div>
+						}<br/>
+				</div>
+				}
+				
+							</div>
+	</div>
+  </slide>
+  <slide class="segue nobackground partTitle" style="background: url(images/DDT/learn.jpg); background-size: 100%;background-position:0px -700px;">
+	  <h2 style="top:360px">4. Lessons learned</h2>
+	  <aside style="top:400px;width:655px" class="gdbar" ></aside>
+  </slide> 
+  
+  <slide class="part4">
+    <hgroup>
+      <h2>
+	 Lessons learned
+	  </h2>	  
+    </hgroup>
+	  <article style="padding-top:80px;padding-right:30px;">
+	  1. SWTBot is cool, but tests can be <b>hard to maintain & understand</b><br/>
+	  <br/>2. Capturing scenarios through models instead of code makes test <b>easier to maintain</b><br/>
+	  <br/>3. Providing a textual syntax to edit those models <b>improves user experience</b><br/>
+	  <br/>4. Using Intent to tie doc, models & code makes sure <b>intention is never lost</b><br/>
+	   </article>
+  </slide>
+  
+   <slide class="part4">
+    <hgroup>
+      <h2>
+		Improvements & Issues to tackle (I)
+	  </h2>			  </hgroup>
+	    <article style="padding-top:50px;padding-right:30px;">
+		<h3> Conceptual concerns </h3>
+		<br/>
+		1. Apply the Doc-Driven Testing approach on more use cases<br/><br/>
+		2. Improve <i>checking</i> definition
+		</article>
+   </slide>
+   
+   <slide class="part4">
+    <hgroup>
+      <h2>
+		Improvements & Issues to tackle (II)
+	  </h2>			  </hgroup>
+	    <article style="padding-top:50px;padding-right:30px;">
+		<h3> Design concerns </h3>
+		<br/>
+		1. Extensibility: allow to provide new Actions sets<br/><br/>
+		2. Extensibility: what about non SWTBot-based tests? (Jubula, Q7...)
+		</article>
+   </slide>
+
+   <slide class="part4">
+    <hgroup>
+      <h2>
+		Improvements & Issues to tackle (III)
+	  </h2>			   </hgroup>
+	    <article style="padding-top:50px;padding-right:30px;">
+		<h3> Tooling concerns: textual syntax </h3>
+		1. Need for an extensible grammar is it possible with Xtext ?<br/>
+	
+		 
+		<br/><h3>Tooling concerns: Mylyn Intent bridge</h3>
+		 1. JUnit tests should be automatically generated (instead of using quick-fix)<br/>
+		2. Generated tests should be hidden: launch TestSuite directly from document<br/>
+		3. Improve junit failures: directly open related documentation
+		</article>
+	</slide>
+   <slide class="thanks">
+    <hgroup>
+      <h2>
+		Thank You!
+	  </h2>
+    </hgroup>
+
+
+		<article style="margin-top :30px">
+		<img class="reflect" src="images/contact/website.png"  style="width:50px"/> 
+		<a href="http://www.eclipse.org/eef">http://www.eclipse.org/eef</a> <span style="margin-left:100px">
+		<a href="http://www.eclipse.org/intent">http://www.eclipse.org/intent</a></span>
+		
+		<br/> <img class="reflect" src="images/Intent/Image-Intent_logo_cropped.png"  style="width:50px"/> 
+		<a href="http://wiki.eclipse.org/EEF">http://wiki.eclipse.org/EEF</a><span style="margin-left:100px">
+		<a href="http://wiki.eclipse.org/Intent">http://wiki.eclipse.org/Intent</a></span>
+		<h2><br/>Don't miss Intent & EEF talks tomorrow:</h2>
+		<ul><li>11h - Stop throwing your doc away: Agile Documentation with Mylyn Intent</li></ul>
+		<ul><li>15h - EMF Community, time for moving on Eclipse4 thanks to the EEF 2.0!</li></ul>
+		<br/><h2>
+		Don't forget to give Feedback <br/>
+		 <img class="reflect" style="padding-top:20px" src="images/Intent/feedback.png"/> 
+		</h2>
+	   </article>
+  </slide>
+  
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>

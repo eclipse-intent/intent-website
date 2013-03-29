@@ -1,0 +1,563 @@
+<!--
+Google IO 2012 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+   <link rel="stylesheet" media="all" href="theme/css/custo.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground" style="background: url(images/Intent/doc/rtfm.jpg); background-size: 100%;">
+	<aside class="gdbar" style="width: 350px;">	
+		<img style=" width: 261px;height: 85px;position: absolute;right: 0;margin: 8px 15px;" 
+	src="images/Intent/Image-Intent_logo.png">
+	</aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup style="position:relative;left:-100px;top:240px;padding: 0px 0px 0px 0px;margin:0px 0px 0px 0px;">
+		<div>
+      <h1 data-config-title class="stroke white" style="font-size:52px"><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle class="stroke white"><!-- populated from slide_config.json --></h2>
+	  <br/><br/><br/><br/><br/>
+	  <p style="font-size:27px" data-config-presenter class="stroke white"><!-- populated from slide_config.json --></p>
+	 	<p style="font-size:27px;width:300px;margin-top:-60px; margin-left:860px"><img src="images/Intent/ec_boston.png" style="width:70%" /></p>
+	  </div>
+	  </div>
+    </hgroup>	
+
+  </slide>
+
+  <slide class="nutshell">
+    <hgroup>
+      <h2>
+	  <img style="width: 261px;height: 85px;float:left;" src="images/Intent/Image-Intent_logo.png">
+	  <div style="padding-top:20px;">&nbsp;&nbsp;in a Nutshell</div>
+	  </h2>
+    </hgroup>
+    <article class="auto-fadein noBullets">
+      <ul >
+        <li>A <b>documentation</b> environment</li>
+		<ul class="build">
+			<li><b>synchronized</b> with development artifacts</li>
+			<li><b>customizable</b> for your development processes</li>
+		</ul>
+    </article>
+	<article class="build rightaligned" style="padding-top:150px">
+      <ul>
+        <img style="float:left;position:absolute;left:500px" src="images/Intent/egg-incubation.png"/>
+		<li>Parf of <b>Mylyn</b> docs</li>
+		<li>In incubation phase</li>		
+	    <li>Parf of Release train since Juno </li>
+	  </ul>
+    </article>
+  </slide>
+  
+  <slide class="segue nobackground partTitle" style="background: url(images/Intent/doc/wasted_paper.jpg); background-size: 100%;">
+	  <h2 style="top:-20px">1. Documentation Sucks <span style="font-size:0px;">_</span></h2>
+	  <aside style="top:20px; width:650px" class="gdbar" ></aside>
+  </slide>
+
+  <slide class="part1">
+    <hgroup>
+      <h2>
+		Why does Documentation <b>Suck</b>?
+	  </h2>
+    </hgroup>
+    <article class="auto-fadein noBullets">
+		<p>
+		  1. Because most of the time it does not exist/contain the infos you need
+		 </p>
+		</article>
+	</slide>
+	
+	<slide class="part1">
+    <hgroup>
+      <h2>
+		Why does Documentation <b>Suck</b>?
+	  </h2>
+    </hgroup>
+    <article class="noBullets">
+		<p>
+		  1. Because most of the time it does not exist/contain the infos you need
+		 </p>
+		<div class="paddinger">
+			 <hgroup>
+				  <h3>
+					Why does nobody write doc? <br/><hr/>
+				  </h3>
+			   </hgroup>
+			  <img class="reflect" src="images/Intent/doc/blank_doc.jpg"  style="float:left;padding-right:10px;width:35%"/>
+			    <p>Comparable to massive rejection of Unit Testing<br/><br/></p>
+				<p>"Working software <b>over comprehensive documentation</b>"<br/>
+					<span style="padding-left:375px">Agile Manifesto</span>
+				</p>
+				<p>
+					<br/>
+			Don't be short-sighted: Enable your <b>next effort</b>
+				<br/>	<br/>	As a developper, you spend most of your time <b>understanding other people's code</b>.<br/>
+				</p>
+		 </div>
+		</article>
+	</slide>
+	
+	<slide class="part1">
+    <hgroup>
+      <h2>
+		Why does Documentation <b>Suck</b>?
+	  </h2>
+    </hgroup>
+    <article class="noBullets">
+		 <p>
+		  1. Because most of the time it does not contain what you are looking for.
+		 </p>
+		 <p>
+			2. Because most of the time it's <b>outdated</b> -> no one trusts it anymore				 
+		</p>
+    </article>	
+  </slide>
+  
+  <slide class="part1">
+    <hgroup>
+      <h2>
+		Why does Documentation <b>Suck</b>?
+	  </h2>
+    </hgroup>
+    <article class="noBullets">
+		 <p>
+		  1. Because most of the time it does not contain what you are looking for.
+		 </p>
+		 <p>
+			2. Because most of the time it's <b>outdated</b> -> no one trusts it anymore				 
+		</p>
+		<div class="paddinger">
+			<hgroup>
+				 <h3>
+					Why is Documentation <b>outdated</b>?<br/><hr/>
+				</h3>
+			</hgroup>
+			<img class="build" src="images/Intent/doc/doc_monster.png"  style="float:left;padding-right:10px;width:35%"/>
+			<p>
+				Because <b>keeping your doc synchronized</b> is a burden <br/>
+				<br/>
+				<br/>
+				That's exactly what Intent is about
+			</p>
+			<div style="clear:both"/>
+		</div>
+    </article>	
+  </slide>
+  
+
+  <slide class="segue nobackground partTitle" style="background: url(images/Intent/part2.jpg); background-size: 100%;">
+	  <h2>2. Synchronize your Doc with Intent <span style="font-size:0px;">_</span></h2>
+	  <aside style="width:875px" class="gdbar" ></aside>
+  </slide>
+  
+    
+  <slide class="part2" style="background: url(images/Intent/linked_doc.png); background-size: 90%;background-position:30px 0px;background-color:white; background-repeat : no-repeat;">
+	<div class="auto-fadein paddinger" style="position:relative;top:100px;text-align:center;width:62%">
+		<h2>What do we want ?</h2>
+		<hr/>
+		A mechanism to <b>link</b> documentation parts with technical<br/> artifacts (Java code, models, plug-in dependencies...)
+		</div>
+  </slide>
+  
+  <slide class="part2" style="background: url(images/Intent/linked_doc_step2a.png); background-size: 90%;background-position:30px 0px;background-color:white; background-repeat : no-repeat;">
+  </slide>
+  
+  <slide class="part2" style="background: url(images/Intent/linked_doc_step5b.png); background-size: 90%;background-position:30px 0px;background-color:white; background-repeat : no-repeat;">
+  </slide>
+  
+   <slide class="partNONE" style="background: url(images/Intent/smartEA/instead_of_v2.png); background-size: 90%;background-position:30px 30px;background-color:white; background-repeat : no-repeat;">
+  </slide>
+  
+  <slide class="part2">
+    <hgroup>
+      <h2>
+		One <b>Intent Document</b> mixing both
+	  </h2>
+    </hgroup>
+			<p style="padding-left:50px;padding-top:50px;color:black">
+				<span style="">- Pure documentation zones<br/></span>
+				<br/>
+				<span style">- Formal links zones<br/></span>
+				<br/>
+			</p>
+		<div class="intent_content">
+			<b class="kw">Chapter</b> <b>Significant Scenarios</b> {
+				<div class="intent_subsectioncontainer">
+				<div class="du"><br/>
+					This chapter specifies the behavior of the <b>*my.plugin*</b> plugin by listing relevant scenarios.<br/> These scenarios can involve both
+					human actors or computer/system actors, as defined in chapter 1.5.
+				</div>
+					<br/><b class="kw">Section</b> <b>Scenario S-01: get source of a Java method</b> {
+						<div class="intent_subsectioncontainer">
+								<div class="du"><br/>
+										<b>*As a*</b> end-user<br/>
+										<b>*Given*</b> a <i>_Java class_</i> containing a non-abstract method<br/>
+										<b>*Then*</b> when getting the model representation of this Java Class<br/>
+									the source of each method should be the exact source of the java method<br/><br/>
+								</div>
+								<div class="intent_modelingunit">
+								<b class="kw">@M</b><br/>
+								<div class="intent_subsectioncontainer">
+								<b class="kw">@ref</b><i style="color:blue"> "org.eclipse.my.plugin.tests/src/org/eclipse/my/plugin/tests/GetJavaMethodSourceTest.java"</i>
+									<br/>
+								</div>
+								<b class="kw">M@</b>
+								</div></div>
+							}	
+				</div>
+				}
+				
+			</div>
+			<br/>
+
+  </slide>
+  
+   <slide class="part2">
+    <hgroup>
+      <h2>
+		One <b>Intent Document</b> mixing both
+	  </h2>
+    </hgroup>
+		<p style="padding-left:50px;padding-top:50px;color:black">
+			<span style="">- Pure documentation zones<br/>
+				<span style="padding-left:30px;">Explanations in Natural language<br/></span>
+				<span style="padding-left:30px;">Use the <b>Textile</b> syntax<br/><br/></span>
+			</span>
+		</p>
+		<div class="intent_content">
+			<b class="kw">Chapter</b> <b>Significant Scenarios</b> {
+				<div class="intent_subsectioncontainer">
+				<div class="du"><br/>
+					This chapter specifies the behavior of the <b>*my.plugin*</b> plugin by listing relevant scenarios.<br/> These scenarios can involve both
+					human actors or computer/system actors, as defined in chapter 1.5.
+				</div>
+					<br/><b class="kw">Section</b> <b>Scenario S-01: get source of a Java method</b> {
+						<div class="intent_subsectioncontainer">
+								<div class="du"><br/>
+										<b>*As a*</b> end-user<br/>
+										<b>*Given*</b> a <i>_Java class_</i> containing a non-abstract method<br/>
+										<b>*Then*</b> when getting the model representation of this Java Class<br/>
+									the source of each method should be the exact source of the java method<br/><br/>
+								</div>
+								<div class="greyed">
+								<div class="intent_modelingunit" style="background-color:#F8F8F8;color:grey;font-size: 14px;">
+								@M<br/>
+								<div class="intent_subsectioncontainer">
+								@ref "org.eclipse.my.plugin.tests/src/org/eclipse/my/plugin/tests/GetJavaMethodSourceTest.java"
+									</div>
+								M@
+								</div>
+								</div>
+													
+						</div>}				
+				</div>
+				}
+				
+		</div>
+  </slide>
+  
+    
+  <slide class="part2">
+    <hgroup>
+      <h2>
+		One <b>Intent Document</b> mixing both
+	  </h2>
+    </hgroup>
+		<p style="padding-left:50px;padding-top:50px;color:black">
+			<span style="">- Formal links zones<br/>
+				<span style="padding-left:30px;">Reference to technical artifacts (Java, models, Manifests...)<br/></span>
+				<span style="padding-left:30px;">Extensible behavior (display, hyperlinks, validation...)<br/><br/></span>
+			</span>
+		</p>
+		<div class="intent_content greyed">
+			Chapter Significant Scenarios {
+				<div class="intent_subsectioncontainer">
+				<div class="du">
+					This chapter specifies the behavior of the *my.plugin* plugin by listing relevant scenarios.<br/>
+					These scenarios can involve both
+					human actors or computer/system actors, as defined in chapter 1.5.
+				</div>
+					<br/>SectionComputer Actors{
+						<div class="intent_subsectioncontainer">
+								<div class="du">
+										*As a* end-user<br/>
+										*Given* a _Java class_ containing a non-abstract method<br/>
+										*Then* when getting the model representation of this Java Class<br/>
+									the source of each method should be the exact source of the java method<br/><br/>
+								</div>
+								<div class="intent_modelingunit">
+								<b class="kw">@M</b><br/>
+								<div class="intent_subsectioncontainer">
+								<b class="kw">@ref</b><i style="color:blue"> "org.eclipse.my.plugin.tests/src/org/eclipse/my/plugin/tests/GetJavaMethodSourceTest.java"</i>
+									<br/>
+								</div>
+								<b class="kw">M@</b>
+								</div></div>
+						}<br/>
+				</div>
+				}
+				
+							</div>
+	</div>
+  </slide>
+  
+  <slide class="segue nobackground partTitle" style="background: url(images/Intent/inAction.jpg); background-size: 100%;">
+	  <h2 style="left:550px;top:0px;">3. Intent in Action <span style="font-size:0px;">_</span></h2>
+	  <aside style="width:460px;top:35px;" class="gdbar right" ></aside>
+  </slide>
+  
+  <slide class="segue nobackground partTitle" style="background: url(images/Intent/ariadne_bg.png); background-size: 100%;">
+	  <h2>To code synchronization and beyond <span style="font-size:0px;">_</span></h2>
+	  <aside style="width:960px" class="gdbar" ></aside>
+	  <img  style="margin-top:100px;position:relative;top:-200px;left:100px;width:80%" src="images/Intent/maze.png"/>
+  </slide>
+  
+  <slide class="part3" style="background: url(images/Intent/sync01.png); background-size: 90%;background-position:30px 0px;background-color:white; background-repeat : no-repeat;">
+  <div class="paddinger" style="position:relative;top:230px;left:170px;text-align:center;width:250px">
+		<h3 style="padding:0px 0px 0px 0px;">Intent <b>Synchronizer</b></h3>
+		<hr/>
+		<span style="font-size:18px">
+		Compares Doc (Formal links)  with Artifacts (as Models)</span>
+  </div>
+
+  </slide>
+  
+  
+  <slide class="part3" style="background: url(images/Intent/sync02.png); background-size: 90%;background-position:30px 0px;background-color:white; background-repeat : no-repeat;">
+ <div class="paddinger" style="position:relative;top:230px;left:170px;text-align:center;width:250px">
+		<h3 style="padding:0px 0px 0px 0px;">Intent <b>Synchronizer</b></h3>
+		<hr/>
+		<span style="font-size:18px">
+		Compares Doc (Formal links)  with Artifacts (as Models)</span>
+  </div>
+      <div class="paddinger" style="position:relative;top:-120px;left:170px;text-align:center;width:250px">
+		<h3 style="padding:0px 0px 0px 0px;">Synchronization <b>Bridge</b></b></h3>
+		<hr/>
+		<span style="font-size:18px">
+		Represents a technical artifact (Java class, plugin.xml...) as a Model</span>
+  </div>
+  </slide>
+  
+   <slide class="part3" style="background: url(images/Intent/sync03.png); background-size: 90%;background-position:30px 0px;background-color:white; background-repeat : no-repeat;">
+ <div class="paddinger" style="position:relative;top:230px;left:170px;text-align:center;width:250px">
+		<h3 style="padding:0px 0px 0px 0px;">Intent <b>Synchronizer</b></h3>
+		<hr/>
+		<span style="font-size:18px">
+		Compares Doc (Formal links)  with Artifacts (as Models)</span>
+  </div>
+      <div class="paddinger" style="position:relative;top:-120px;left:170px;text-align:center;width:250px">
+		<h3 style="padding:0px 0px 0px 0px;">Synchronization <b>Bridge</b></b></h3>
+		<hr/>
+		<span style="font-size:18px">
+		Represents a technical artifact (Java class, plugin.xml...) as a Model</span>
+  </div>
+  </slide>
+
+  <slide class="segue nobackground partTitle" style="background: url(images/Intent/constraint.png); background-size: 100%;">
+	   <h2 style="top:50px;left:-90px;";>4. Checking Constraints Sucks <span style="font-size:0px;">_</span></h2>
+	  <aside style="width:670px;top:85px;" class="gdbar" ></aside>
+  </slide>
+  
+   
+   <slide class="part4">
+    <hgroup>
+      <h2>
+		<b>Automate</b> high-level constraints checking
+	  </h2>
+	 <article class="noBullets">
+			<div style="padding-left:30px;padding-top:20px">
+			<h3 style="color:black">You <b>already</b> constraint Development</h3>
+			<p style="padding-left:15px">With <b>informal</b> processes, dev guidelines, good practices...
+			<img src="images/Intent/compare_plan.png" style="width:100%" /><br/>
+			
+			</p>
+			</div>
+			<!--style="padding-left: 520px; padding-top:10px;"--> 
+			<div style="padding-left: 30px; padding-top:70px;">
+			<h3 style="color:black">But high-level constraints are <b>hard to check</b></h3>
+			<p style="padding-left:15px">Manual reviews: painful, long, error-prone<br/>
+			
+			<div>
+		</article>
+    </hgroup>
+  </slide>
+  
+     <slide class="part4">
+    <hgroup>
+      <h2>
+		<b>Automate</b> high-level constraints checking
+	  </h2>
+	 <article class="noBullets">
+	 	<div style="padding-top:20px">
+			<h3 style="color:black">Plug constraints in Intent</h3>
+			<p style="padding-left:15px">Problem view integration, extensible quick-fixes</p>
+		</div>
+			<!--style="padding-left: 520px; padding-top:10px;"--> 
+			<div style="padding-top:30px;">
+			<img src="images/Intent/validation.png" style="" /><br/>
+			
+			<div>
+		</article>
+    </hgroup>
+  </slide>
+    <slide class="segue nobackground partTitle" style="background: url(images/Intent/share1.jpg); background-size: 100%;">
+	  <h2 style="top:550px;left:100px;";>5. Documentation sharing sucks <span style="font-size:0px;">_</span></h2>
+	  <aside style="width:920px;top:585px;" class="gdbar" ></aside>
+  </slide>
+
+   <slide class="part5">
+    <hgroup>
+      <h2>
+		Intent: <b>behind the Scene</b>
+	  </h2>
+	   <article class="flexbox vcenter auto-fadein">
+	   <img src="images/Intent/Architecture_repository.png"/>
+	   </article>
+    </hgroup>
+  </slide>
+  
+  
+  <slide class="part5">
+    <hgroup>
+      <h2>
+		Intent: <b>share</b> your doc in real-time
+	  </h2>
+	  <article>
+	  <iframe style="margin-left:-95px;padding-top:50px;width:1190px;height:475px" data-src="demos/cdo/cdo/cdo_player.html"></iframe>
+	  </article>
+    </hgroup>
+  </slide>
+  
+  
+   <slide class="cooking">
+    <hgroup>
+      <h2>
+		Intent: there's <b>more</b>
+	  </h2>
+	  <article style="padding-top:10px;padding-left:120px;">
+	  <img  src="images/Intent/web_export.png" style="width:80%;"/><br/>
+		- HTML Bootstrap export (focused on navigation)<br/><br/>
+		- Xtext integration, new bridges...<br/><br/>
+		- Performances & Stability<br/>
+	   </article>
+    </hgroup>
+  </slide>
+  
+  
+	<slide class="cooking" style="background: url(images/Intent/dream.jpg); background-size: 100%;">
+      <h2 style="maring-top:-150px;">
+		Last minute slide
+	  </h2>	 
+	  <br/><br/>
+	  <span style="padding-top:10px;margin-left:0px;color:black">
+		<b>Mylyn 4.0</b> will store tasks, bugzillas, git repos... <b>as models</b><br/><br/>
+<br/>
+		Imagine what Intent could do!<br/><br/><br/>
+		- <i>Alice is writing a contribution guide showing the git repo URL</i><br/>
+		-> And if URL changes, sync. issues will be raised<br/><br/><br/>
+		- <i>John is closing a bugzilla issue without writing Junit test</i><br/>
+		-> Intent will raise a validation issue as team defined custom rule
+		
+	   </span>
+  </slide>
+  
+    <slide class="three_things">
+    <hgroup>
+      <h2>
+		The 3 things to remember about Intent
+	  </h2>
+	  <article style="padding-top:100px;padding-right:30px;">
+	  <br/>1. Intent keeps your <b>doc up-to-date</b> with concrete world<br/><br/>
+	  <br/>2. Intent allows you <b>formalize</b> your dev <b>constraints</b><br/><br/>
+	  <br/>3. Intent allows <b>real-time collaboration</b> around Doc<br/>
+	   </article>
+    </hgroup>
+  </slide>
+     <slide class="needyou">
+    <hgroup>
+      <h2>
+		Intent Needs <b>You</b>
+	  </h2>
+	  <article style="padding-top:40px;">
+	  <table style="background-color:none; border:0px solid black;"><tr style="background-color:white; border:0px solid black;"><td>
+	  <img  src="images/Intent/need_you.jpg" style="float:left"/>
+	  </td><td>
+		<h3 style="color:black;font-size:34px;">Give us feedback</h3>
+		<div style="padding-left:30px;font-size:22px;">
+		We do take community feedbacks in account <br/>
+		<b>You're driving this ship!</b><br/>
+		- Syntax simplification<br/>	
+		- Java bridge...<br/><br/><br/><br/>
+		</div>
+		<h3 style="color:black;font-size:34px;">Technical contributions</h3>
+		<div style="padding-left:30px;font-size:22px;">
+		- Sync. bridges, validation rules, new repository back-ends...<br/>
+		- Become an Intent committer!
+		</div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		</td></tr></table>
+	   </article>
+    </hgroup>
+  </slide>
+   <slide class="thanks">
+    <hgroup>
+      <h2>
+		Thank You!
+	  </h2>
+    </hgroup>
+
+
+		<article>
+		<img class="reflect" src="images/contact/website.png"  style="width:50px"/> <a href="http://www.eclipse.org/intent">http://www.eclipse.org/intent</a>
+		<br/><br/> <img class="reflect" src="images/Intent/Image-Intent_logo_cropped.png"  style="width:50px"/> <a href="http://wiki.eclipse.org/Intent">http://wiki.eclipse.org/Intent</a>
+		<br/><br/> <img class="reflect" src="images/contact/twitter.jpg" style="width:50px"/> @Intent_project<br/> <span style="padding-left:55px">@alex_lagarde</span>
+		
+		<h2><br/><br/>
+		Don't forget to give Feedback <br/>
+		 <img class="reflect" style="padding-top:20px" src="images/Intent/feedback.png"/> 
+		</h2>
+	   </article>
+  </slide>
+  
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>

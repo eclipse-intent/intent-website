@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml"
       name="Mylyn Intent">
-   <release projectid="mylyn.docs.intent" version="0.7"/>
+   <release projectid="mylyn.docs.intent" version="0.8"/>
    <introduction>
      <html:div xmlns="http://www.w3.org/1999/xhtml">
      <p>
@@ -15,7 +15,10 @@
    <release_deliverables>
      <html:div xmlns="http://www.w3.org/1999/xhtml">
        <ul>
-       	   <li><b>Mylyn Intent</b> : Intent authoring environment (Workspace mode - editor, compiler, synchronizer, project wizards, doc generator...)</li>  
+       	   <li><b>Mylyn Intent</b> : Intent generic components & authoring environment (editor, compiler, synchronizer...). Notice that it can be used in RCP mode as it is independant from core.resources</li>
+           <li><b>Mylyn Intent - Workspace support</b>: Required to make Intent work on an Eclipse workspace (specific views, project wizards...)</li> 
+		   <li><b>Mylyn Intent - CDO support</b>: Required to make Intent work on a CDO repository (specific views, project wizards...)</li> 
+           <li><b>Mylyn Intent Connector: Java</b>: allows to directly drop java files/classes/methods inside an Intent doc an synchronize them</li>
            <li><b>Doc generators For Wikitext</b> : A set of generators for Wikitext documents (Latex, html...)</li> 
            <li><b>Doc generators For Intent document</b> : A set of generators allowing to export an Intent Project to several formats (HTML Bootstrap...)</li> 
        </ul>        
@@ -24,39 +27,53 @@
    <release_milestones>
       <preamble>
          <html:div xmlns="http://www.w3.org/1999/xhtml">
-         Mylyn Intent 0.7 is part of the Mylyn Docs 1.6, which is part of the Mylyn 3.7 release.
+         Mylyn Intent 0.8 is part of the Mylyn Docs 1.8, which is part of the Mylyn 3.9 release.
          Please refer to the <a href="http://www.eclipse.org/projects/project-plan.php?projectid=mylyn#release_milestones">Mylyn plan</a> for release milestones.   
          </html:div>
       </preamble>
-      <milestone date="2012-01-26" milestone="0.7 M4"> <html:div>Mylyn Intent 0.7 M4</html:div></milestone>
+      <milestone date="2013-05-22" milestone="0.8 RC1"> <html:div>Mylyn Intent 0.8 - Release candidate (API and Feature Complete)</html:div></milestone>
+      <milestone date="2013-05-29" milestone="0.8 RC1"> <html:div>Mylyn Intent 0.8 - Release candidate</html:div></milestone>
+      <milestone date="2013-06-05" milestone="0.8 RC1"> <html:div>Mylyn Intent 0.8 - Release candidate (API Freeze)</html:div></milestone>
+      <milestone date="2013-06-12" milestone="0.8 RC1"> <html:div>Mylyn Intent 0.8 - Release candidate (Final Build)</html:div></milestone>
+      <milestone date="2013-06-26" milestone="0.8 RC1"> <html:div>Mylyn Intent 0.8 - Major release</html:div></milestone>
       <postamble><html:div xmlns="http://www.w3.org/1999/xhtml"></html:div></postamble>
    </release_milestones>
    <target_environments>
      <html:div xmlns="http://www.w3.org/1999/xhtml">Mylyn Docs follows the <a href="http://eclipse.org/projects/project-plan.php?projectid=mylyn#target_environments">target environment</a> guidelines of the Mylyn project.</html:div>
    <internationalization>
           <html:div xmlns="http://www.w3.org/1999/xhtml">Mylyn Docs follows the <a href="http://eclipse.org/projects/project-plan.php?projectid=mylyn#target_environment">internationalization</a> guidelines of the Mylyn project.</html:div>
-     </internationalization>
+   </internationalization>
    </target_environments>
    <compatibility_with_previous_releases>
-       <html:div xmlns="http://www.w3.org/1999/xhtml">There is no previous version of Mylyn Intent.</html:div>
+       <html:div xmlns="http://www.w3.org/1999/xhtml">As Intent is still in incubation, there are some API changes since the 0.7 release to handle new features</html:div>
    </compatibility_with_previous_releases>
    <themes_and_priorities>
      <preamble>
-         <html:div xmlns="http://www.w3.org/1999/xhtml">The main priority for Intent 0.7 is to provide the miminal set of features allowing to document
-         your softwares efficiently.
+         <html:div xmlns="http://www.w3.org/1999/xhtml">The main priority for Intent 0.8 is to provide the miminal set of features allowing to document
+         java code, and provide a good end-user experience (completion, syntax highliting, real-time preview, exports...).
          </html:div>
      </preamble>
-     <theme name="Support for Eclipse 3.8 workbench">
-        <description> <html:div>We will support 3.8 as well as 4.2, but the exact functionality may differ.</html:div>
-        </description>
+       <theme name="Stability & performances">
+        <description> <html:div>
+       Although Intent 0.8 will not be perfect in regards to those concerns, we have improved stability & performances.
+        </html:div></description>
      </theme>
-     <theme name="Improving Intent authoring environment">
-        <description> <html:div>Improve Intent editor stability and features (code completion, syntax highliting...).</html:div></description>
+     <theme name="Improve end-user experience">
+        <description> <html:div>
+        Improve the end-user experience by:
+        <ul>
+        <li>Integration with EMFCompare 2 to improve sync. issues display (https://bugs.eclipse.org/bugs/show_bug.cgi?id=395458) </li>
+        <li>Minor UI features (link with editor mechanism, improved preference page, better syntax highliting and completion...)</li>
+        <li> Provide an 'Intent preview' view allowing to get real-time HTML boostrap preview of the currently opened Intent doc part</li>
+        <li></li>
+        </ul>
+        </html:div></description>
      </theme>
-     <theme name="Define an export mechanism for the Intent document">
-        <description> <html:div>Define a set of generator allowing to export the Intent document to HTML, PDF... 
-        The exported doc should provide navigable links between sections.</html:div>
-        </description>
+     <theme name="Java bridge for Intent">
+        <description> <html:div>
+         We have provided a new feature allowing to directly drop java files/classes/methods inside an Intent section. You can then use ctrl+click to open a java editor on those elements, get sync. issues in real-time.
+         Each reference is displayed using an Image showing the element and its javadoc (customizable).
+        </html:div></description>
      </theme>
    </themes_and_priorities>
  </plan>

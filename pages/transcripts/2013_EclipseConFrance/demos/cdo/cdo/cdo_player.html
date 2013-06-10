@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="google" value="notranslate" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title></title>
+<link href="skins/overlay/player-min.css" rel="stylesheet" type="text/css" />
+
+
+
+<style>
+html, body {
+	background-color: white;
+}
+</style>
+</head>
+<body>
+
+<div id="tscVideoContent" style="width:1000px;background-color:white;height:400px;padding:0px;margin:0px;"></div>
+
+<script src="scripts/jquery-1.7.1.min.js" ></script>
+<script src="scripts/jquery-ui-1.8.15.custom.min.js" ></script>
+<script src="scripts/swfobject.js"></script>
+<script src="scripts/modernizr.js"></script>
+<script src="scripts/handlebars.js"></script>
+
+<script src="scripts/player-min.js"></script>
+<script type="text/javascript">
+    TSC.playerConfiguration.setFlashPlayerSwf("cdo_controller.swf");
+    TSC.playerConfiguration.setMediaSrc("cdo.mp4");
+    TSC.playerConfiguration.setXMPSrc("cdo_config.xml");
+    
+    TSC.playerConfiguration.setAutoHideControls(true);
+    TSC.playerConfiguration.setBackgroundColor("white");
+    TSC.playerConfiguration.setCaptionsEnabled(false);
+    TSC.playerConfiguration.setSidebarEnabled(false);
+    
+    TSC.playerConfiguration.setAutoPlayMedia(true);
+    
+    TSC.playerConfiguration.setIsSearchable(false);
+    TSC.playerConfiguration.setEndActionType("stop");
+    TSC.playerConfiguration.setEndActionParam("false");
+    TSC.playerConfiguration.setAllowRewind(-1);
+    
+
+    $(document).ready(function (e) {
+        TSC.mediaPlayer.init("#tscVideoContent");
+    });
+</script>
+
+
+
+</body>
+</html>

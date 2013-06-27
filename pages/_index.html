@@ -26,14 +26,14 @@ The documentation, integrated with other Eclipse tools, then becomes truly usefu
 
 		<p class="right">
 		Intent is currently in <a href="http://wiki.eclipse.org/Development_Resources/Process_Guidelines/What_is_Incubation">Incubation Phase</a> under the 
-		<a href="http://www.eclipse.org/projects/project.php?id=mylyn.docs">Mylyn Docs</a> top-level project, and Intent 0.7 is part of Eclipse Juno Release Train.
+		<a href="http://www.eclipse.org/projects/project.php?id=mylyn.docs">Mylyn Docs</a> top-level project, and Intent 0.8 is part of Eclipse Kepler Release Train.
 		<br/><br/>
 		You can get additional informations by consulting: <br/>
 		<a href="http://wiki.eclipse.org/Intent">
 			&#10003; Intent's Wiki
 		</a><br/>
-		<a href="http://www.eclipse.org/intent/pages/transcripts/2012_AgileALMConnect/Intent_AgileALMConnect2012.htm">	
-			&#10003; Intent presentation at Agile ALM Connect 2012
+		<a href="http://www.eclipse.org/intent/pages/transcripts/2013_EclipseConFrance/Intent_EConFrance2013.html#1">	
+			&#10003; Intent presentation at Agile ALM Connect 2013
 		</a><br/>
 		<a href="http://wiki.eclipse.org/Intent/Useful_Links">
 			&#10003; Useful links (tutorials, installation guide, posts...)
@@ -84,37 +84,39 @@ The documentation, integrated with other Eclipse tools, then becomes truly usefu
 	</div>
 
 	<div id="headlines">
-		<h3>News and Noteworthy</h3>
-		<script src="http://widgets.twimg.com/j/2/widget.js"></script>
-		<script>
+		<h3>News and Noteworthy</h3>	
+			<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+			<script>
 			new TWTR.Widget({
-				version: 2,
-				type: 'profile',
-				rpp: 20,
-				interval: 6000,
-				width: 250,
-				height: 300,
-				theme: {
-					shell: {
-						background: '#e8e7dd',
-						color: '#000000'
-					},
-					tweets: {
-						background: '#FFFFFF',
-						color: '#000000',
-					}
-				},
-				features: {
-					scrollbar: true,
-					loop: true,
-					live: true,
-					hashtags: true,
-					timestamp: true,
-					avatars: true,
-					behavior: 'all'
-				}
-			}).render().setUser('Intent_project').start();
-		</script>
+			  version: 2,
+			  type: 'profile',
+			  rpp: 20,
+			  interval: 6000,
+			  width: 'auto',
+			  height: 50,
+			  theme: {
+			    shell: {
+			      background: '#7d797d',
+			      color: '#ffffff'
+			    },
+			    tweets: {
+			      background: '#ffffff',
+			      color: '#000000',
+			      links: '#0066ff'
+			    }
+			  },
+			  features: {
+			    scrollbar: false,
+			    loop: true,
+			    live: true,
+			    hashtags: true,
+			    timestamp: true,
+			    avatars: false,
+			    toptweets: true,
+			    behavior: 'default'
+			  }
+			}).render().setUser('Intent_Project').start();
+			</script>
 	</div>
 	
 		<div>

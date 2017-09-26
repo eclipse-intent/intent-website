@@ -36,5 +36,5 @@
 	# $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/intent/style_intent.css"/>' . "\n\t");
 	
 	$App->Promotion = TRUE;
-	# TODO $App->SetGoogleAnalyticsTrackingCode("UA-16777490-1");
+	$App->SetGoogleAnalyticsTrackingCode("UA-910670-2");
 ?>

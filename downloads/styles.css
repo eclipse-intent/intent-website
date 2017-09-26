@@ -1,19 +1,13 @@
-body {
-	text-align: center;
-}
-
 #leftcol {
 	margin-top: -20px;
 }
 
 #midcolumn {
-	width: 703px;
-	margin-top: -36px;
-	margin-right: 0;
-	margin-left: -20px;
-	padding-top: 20px;
-	padding-right: 50px;
-	padding-left: 40px;
+	width: 780px;
+	padding-top: 0px;
+	padding-right: 100px;
+	padding-left: 100px;
+	padding-bottom: 10px;
 }
 
 .sideitem {

@@ -1,5 +1,5 @@
 #midcolumn {
-	background: url('background.jpg') top left repeat-x;
+	padding-top: 10px;
 }
 
 #midcolumn li .repo-item {
@@ -18,7 +18,7 @@
 }
 
 .repo1 {
-	padding: 5px 5px 5px 0;
+  padding: 5px 5px 5px 0;
   border-bottom: 3px solid #D4D4DD;
 }
 
@@ -28,14 +28,14 @@
 }
 
 .repo2 {
-	padding: 5px 5px 5px 0;
+  padding: 5px 5px 5px 0;
 }
 
 .drop-label { 
   color: #000000;
   font-size: 12pt;
   font-weight: bold;
-	margin-bottom: 0;
+  margin-bottom: 0;
   margin-top: 0;
   padding-bottom: 0;
   padding-top: 0;

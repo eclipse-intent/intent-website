@@ -1,0 +1,301 @@
+#header {
+	display: none;
+}
+
+#clickToHome {
+	
+}
+
+#novaContent {
+	background: url("images/backgroundAcceleoEclipse.png") no-repeat white;
+}
+
+#introText p.left {
+	text-align: justify;
+	width: 48%;
+	float: left;
+}
+
+#introText p.right {
+	text-align: justify;
+	width: 48%;
+	float: right;
+}
+
+#feature {
+	text-align: justify;
+	float: left;
+	width: 63%;
+	margin-right: 3%;
+}
+
+#feature_discovery {
+	text-align: justify;
+	float: left;
+	width: 30%;
+}
+
+#acceleoInAction {
+	text-align: justify;
+	float: left;
+	width: 63%;
+	margin-right: 3%;
+}
+
+#primaryLinks {
+	position: relative;
+	padding-left: 420px;
+	width: 560px;
+}
+
+#primaryLinks h3 {
+	visibility: hidden;
+	height: 0;
+}
+
+#primaryLinks ul li {
+	vertical-align: bottom;
+	display: inline-block;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#primaryLinks ul .toTheRight {
+	margin-left: 150px;
+}
+
+#primaryLinks a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+#primaryLinks a {
+	display: inline-block;
+	list-style-type: none;
+	width: 180px;
+	height: 77px;
+	padding-top: 10px;
+	padding-left: 70px;
+	margin: 0;
+	color: black;
+}
+
+#primaryLinks strong {
+	font-size: larger;
+	display: block;
+	text-decoration: none;
+}
+
+#buttonDownload {
+	background: transparent url("images/buttonDownload_empty.png") no-repeat 0 0;
+}
+
+#buttonDownload:hover {
+	
+}
+
+#buttonDocumentation {
+	background: transparent url("images/buttonDocumentation_empty.png") no-repeat 0 0;
+}
+
+#buttonDocumentation:hover {
+	
+}
+
+#buttonSupport {
+	background: transparent url("images/buttonSupport_empty.png") no-repeat 0 0;
+}
+
+#buttonSupport:hover {
+	
+}
+
+#buttonInvolved {
+	background: transparent url("images/buttonInvolved_empty.png") no-repeat 0 0;
+}
+
+#buttonInvolved:hover {
+	
+}
+
+#screencast {
+	margin-bottom: 10px;
+}
+
+.maintenance a {
+	display: block;
+	height: 24px;
+	padding-left: 24px;
+	background: transparent url("images/logo/acceleo_icon_24.png") no-repeat
+		center left;
+}
+
+#maintenanceLink {
+	padding-left: 27px;
+	padding-top: 6px;
+}
+
+#obeo a {
+	display: block;
+	padding: 0;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#obeo img {
+	display: block;
+	width: 117px;
+	height: 60px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#newAndNoteworthy a {
+	display: block;
+	width: 218px;
+	height: 51px;
+	padding: 0;
+	text-indent: -9000px;
+	background: transparent url("images/newAndNoteworthy.png") no-repeat 0 0;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#eclipseCommunityAward a {
+	display: block;
+	width: 144px;
+	height: 144px;
+	padding: 0;
+	text-indent: -9000px;
+	background: transparent url("http://www.eclipse.org/images/awards/winner09.jpg") no-repeat 0 0;
+	margin-top: 1px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#OWFInnovationAward a {
+	display: block;
+	width: 189px;
+	height: 102px;
+	padding: 0;
+	text-indent: -9000px;
+	background: transparent url("images/openInnovationAward.png") no-repeat 0 0;
+	margin-top: 1px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#olderNews {
+	padding-bottom: 5%;
+}
+
+#olderNews a {
+	float: right;
+	font-size: smaller;
+	margin-right: 5%;
+}
+
+.sideitem {
+	border-bottom: 1px dotted #d4d4dd;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	clear: both;
+}
+
+.sideitem .modal {
+	background: #FFF url('/eclipse.org-common/themes/Nova/images/thinModalBg.png') repeat-x;
+	padding: 5px;
+}
+
+.sideitem h6 {
+	background-color: #e8e7dd;
+	border-bottom: 2px solid #FFF;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 0px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	padding: 8px 5px;
+}
+
+.sideitem li {
+	text-align: justify;
+	padding: 0 10px 5px 0;
+}
+
+.sideitem ul,.sideitem ol,.sideitem form,.sideitem p {
+	font-size: 12px;
+	padding: 5px;
+}
+
+#midcolumnhome {
+	width: 640px;
+	padding: 0 10px 10px 10px;
+	background: transparent;
+	float: left;
+	margin-right: 20px;
+}
+
+#midcolumn {
+	width: 780px;
+	padding: 0 100px 10px 100px;
+}
+
+#rightcolumn {
+	width: 260px;
+}
+
+h3 {
+	clear: both;
+}
+
+h7 {
+	font-weight: bold;
+	padding: 5px;
+}
+
+a strong {
+	text-decoration: underline;
+}
+
+.twtr-hd h4, .twtr-hd h3{
+clear:none;
+}
+.acceleonavitem h2 {
+	background-color: #e8e7dd;
+	border-bottom: 2px solid #FFF;
+	font-weight: bold;
+	margin-bottom: 0px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-topright:3px;
+	padding: 8px 5px;
+}
+
+.acceleonavitem .contents {
+	background: #FFF url('/eclipse.org-common/themes/Nova/images/thinModalBg.png') repeat-x;
+	padding: 5px;
+}
+
+#novaContent.faux
+{
+	background: url("images/backgroundAcceleoEclipse.png") no-repeat white;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+
+#downloadtoc {
+	border: 1px solid #000000;
+	width: 180px;
+}
+
+#toctitle {
+	text-align: center;
+	font-weight: bold;
+}
+
+.toTheRight {
+	margin-left: 150px;
+}

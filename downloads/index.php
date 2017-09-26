@@ -1,7 +1,14 @@
-<?php  			
-	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	
-	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 
-	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
+<?php
+	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");
+	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");
+	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php");
+
+	$App 	= new App();
+	$Nav	= new Nav();
+	$Menu 	= new Menu();
+
+	include($App->getProjectCommon());
+	
 	require_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/buildServer-common.php");
 	require_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/downloads-scripts.php");
 	require_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php");
@@ -15,18 +22,17 @@
 	
 	#### Project dependant variables ####
 	$projectTitle = "Intent";
-	$pageTitle = "Intent - Download";
+	$pageTitle = "Download";
 	// Path to the downloads area under http://downloads.eclipse.org (will be used by custom-scripts and various "eclipse" scripts)
 	$PR = "intent";
 	// absolute path to the site's home page (will be used by custom-scripts for images... should probably use css instead)
 	$websiteRoot = "/intent";
 	
 	# version => array of qualifiers
+	# ex : "3.3.0" => array("R201205291042")
 	$hiddenBuilds = array(
-		#"0.7.0" => array("R201205301208"), #release, RC2
 	);
 	#### End variables ####
-	
 	
 	$PWD = getPWD("downloads/drops");
 	$branches = loadDirSimple($PWD, ".*", "d");
@@ -44,11 +50,11 @@
 	// Retrieve the list of builds from the disk (folder list only)
 	$builds = getBuildsFrom($branches, $PWD);
 	
-	$builds = reorderAndSplitBuilds($builds, $buildTypes, $hiddenBuilds);	
+	$builds = reorderAndSplitBuilds($builds, $buildTypes, $hiddenBuilds);
 	$releases = $builds[1];
 	$builds = $builds[0];
 	
-	$html  = "<div id=\"midcolumn\">\n";
+	$html = "<div id=\"midcolumn\">\n";
 	$html .= "<ul>\n";
 	$html .= generateHTMLReleaseList($releases, $projectTitle, $PR, $PWD, $websiteRoot);
 	$html .= generateHTMLBuildList($builds, $projectTitle, $PR, $PWD, $websiteRoot);
